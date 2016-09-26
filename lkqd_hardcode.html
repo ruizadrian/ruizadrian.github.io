@@ -200,7 +200,7 @@
 							  var playerId = '';
 							  var playerWidth = '300';
 							  var playerHeight = '250';
-							  var playInitiation = 'auto';
+							  var playInitiation = 'manual';
 							  var volume = '50';
 							  var execution = 'inbanner';
 							  var placement = '';
@@ -220,7 +220,7 @@
 							  var lkqdVPAID;
 							  var lkqdId = new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString();
 							  var creativeData = '';
-							  var environmentVars = { slot: document.getElementById(playerContainerId), videoSlot: document.getElementById(playerId), videoSlotCanAutoPlay: false };
+							  var environmentVars = { slot: document.getElementById(playerContainerId), videoSlot: document.getElementById(playerId), videoSlotCanAutoPlay: true };
 
 							  function onVPAIDLoad()
 							  {

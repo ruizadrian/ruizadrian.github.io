@@ -281,8 +281,6 @@
 							  function onVPAIDLoad()
 							  {
 								lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
-								lkqdVPAID.subscribe(function() { lkqdVPAID.pauseAd(); }, 'AdNotViewable');
-								lkqdVPAID.subscribe(function() { lkqdVPAID.resumeAd(); }, 'AdViewable');
 							  }
 
 							  var vpaidFrame = document.createElement('iframe');

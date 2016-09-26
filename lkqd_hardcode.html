@@ -192,20 +192,22 @@
  -->
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-               <div class="col-lg-6">
+               
+               
+               
+               <div id="lkqd_outstream" class="col-lg-6">
                		<script>
-               			(function()
+               		(function()
 							{
-							  var playerContainerId = 'ad' + Math.round(Math.random()*1000000000).toString();
+							  var playerContainerId = 'lkqd_outstream';  
 							  var playerId = '';
-							  var playerWidth = '300';
-							  var playerHeight = '250';
-							  var playInitiation = 'user';
-							  var volume = '50';
-							  var execution = 'inbanner';
-							  var placement = '';
+							  var playerWidth = '';
+							  var playerHeight = '';
+							  var playInitiation = 'auto';
+							  var volume = '20';
+							  var execution = 'outstream';
+							  var placement = 'incontent';
 							  var support = 'html5';
-							  var pageurl = '';
 							  var render = '';
 							  var controls = '';
 							  var tracki = '';
@@ -213,10 +215,8 @@
 							  var custom1 = '';
 							  var custom2 = '';
 							  var custom3 = '';
-							  var videourl = '';
 							  var pubMacros = '';
 
-							  if (!document.getElementById(playerContainerId)) { try { if (document.readyState && document.readyState != 'complete' && document.readyState != 'interactive'){ document.write('<div id="' + playerContainerId + '"></div>'); }} catch (e) {}}
 							  var lkqdVPAID;
 							  var lkqdId = new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString();
 							  var creativeData = '';
@@ -225,6 +225,8 @@
 							  function onVPAIDLoad()
 							  {
 								lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+								lkqdVPAID.subscribe(function() { lkqdVPAID.pauseAd(); }, 'AdNotViewable');
+								lkqdVPAID.subscribe(function() { lkqdVPAID.resumeAd(); }, 'AdViewable');
 							  }
 
 							  var vpaidFrame = document.createElement('iframe');
@@ -233,7 +235,7 @@
 							  vpaidFrame.style.display = 'none';
 							  var vpaidFrameLoaded = function() {
 								vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
-								vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69154&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&pageurl=' + encodeURIComponent(pageurl) + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&videourl=' + encodeURIComponent(videourl) + '&m=' + encodeURIComponent(pubMacros);
+								vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69154&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros);
 
 								vpaidLoader.onload = function() {
 								  lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
@@ -247,6 +249,60 @@
 							  vpaidFrame.onerror = vpaidFrameLoaded;
 							  document.documentElement.appendChild(vpaidFrame);
 							})();
+
+               			// (function()
+// 							{
+// 							  var playerContainerId = 'ad' + Math.round(Math.random()*1000000000).toString();
+// 							  var playerId = '';
+// 							  var playerWidth = '300';
+// 							  var playerHeight = '250';
+// 							  var playInitiation = 'user';
+// 							  var volume = '50';
+// 							  var execution = 'inbanner';
+// 							  var placement = '';
+// 							  var support = 'html5';
+// 							  var pageurl = '';
+// 							  var render = '';
+// 							  var controls = '';
+// 							  var tracki = '';
+// 							  var trackc = '';
+// 							  var custom1 = '';
+// 							  var custom2 = '';
+// 							  var custom3 = '';
+// 							  var videourl = '';
+// 							  var pubMacros = '';
+// 
+// 							  if (!document.getElementById(playerContainerId)) { try { if (document.readyState && document.readyState != 'complete' && document.readyState != 'interactive'){ document.write('<div id="' + playerContainerId + '"></div>'); }} catch (e) {}}
+// 							  var lkqdVPAID;
+// 							  var lkqdId = new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString();
+// 							  var creativeData = '';
+// 							  var environmentVars = { slot: document.getElementById(playerContainerId), videoSlot: document.getElementById(playerId), videoSlotCanAutoPlay: true };
+// 
+// 							  function onVPAIDLoad()
+// 							  {
+// 								lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+// 							  }
+// 
+// 							  var vpaidFrame = document.createElement('iframe');
+// 							  vpaidFrame.id = lkqdId;
+// 							  vpaidFrame.name = lkqdId;
+// 							  vpaidFrame.style.display = 'none';
+// 							  var vpaidFrameLoaded = function() {
+// 								vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
+// 								vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69154&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&pageurl=' + encodeURIComponent(pageurl) + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&videourl=' + encodeURIComponent(videourl) + '&m=' + encodeURIComponent(pubMacros);
+// 
+// 								vpaidLoader.onload = function() {
+// 								  lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
+// 								  onVPAIDLoad();
+// 								  lkqdVPAID.handshakeVersion('2.0');
+// 								  lkqdVPAID.initAd(playerWidth, playerHeight, 'normal', 600, creativeData, environmentVars);
+// 								};
+// 								vpaidFrame.contentWindow.document.body.appendChild(vpaidLoader);
+// 							  };
+// 							  vpaidFrame.onload = vpaidFrameLoaded;
+// 							  vpaidFrame.onerror = vpaidFrameLoaded;
+// 							  document.documentElement.appendChild(vpaidFrame);
+// 							})();
 					</script>
                </div>
                

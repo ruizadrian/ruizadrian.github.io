@@ -259,7 +259,7 @@
 							  var playInitiation = 'auto';
 							  var volume = '50';
 							  var execution = 'outstream';
-							  var placement = 'incontent';
+							  var placement = '';
 							  var support = 'html5';
 							  var pageurl = '';
 							  var render = '';
@@ -281,6 +281,8 @@
 							  function onVPAIDLoad()
 							  {
 								lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+								lkqdVPAID.subscribe(function() { lkqdVPAID.pauseAd(); }, 'AdNotViewable');
+								lkqdVPAID.subscribe(function() { lkqdVPAID.resumeAd(); }, 'AdViewable');
 							  }
 
 							  var vpaidFrame = document.createElement('iframe');

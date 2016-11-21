@@ -12,13 +12,13 @@
     <title>H Code Test Page</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="http://hcodemedia.com/wp-content/uploads/2015/08/fav.png">
 	<link rel="apple-touch-icon" href="http://hcodemedia.com/wp-content/uploads/2015/08/fav.png"/>
 
     <link href="css/blog-post.css" rel="stylesheet">
 
-    
+
 </head>
 
 <body>
@@ -72,7 +72,7 @@
 
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Created by H Code Media</p>
-                
+
                 <h1>LKQD Test Page</h1>
 
                 <hr>
@@ -89,17 +89,17 @@
 						<script>
 								(function()
 								{
-								  var playerContainerId = 'lkqd_outstream_incontent';  
+								  var playerContainerId = 'lkqd_outstream_incontent';
 								  var playerId = '';
-								  var playerWidth = '600';
-								  var playerHeight = '400';
+								  var playerWidth = '300';
+								  var playerHeight = '250';
 								  var playInitiation = 'auto';
-								  var volume = '100';
+								  var volume = '0';
 								  var execution = 'outstream';
 								  var placement = 'incontent';
 								  var support = '';
 								  var render = '';
-								  var controls = '';
+								  var controls = 'true';
 								  var tracki = '';
 								  var trackc = '';
 								  var custom1 = '';
@@ -125,7 +125,7 @@
 								  vpaidFrame.style.display = 'none';
 								  var vpaidFrameLoaded = function() {
 									vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
-									vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69223&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros);
+									vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69223&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros) + '&close=true';
 
 									vpaidLoader.onload = function() {
 									  lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();

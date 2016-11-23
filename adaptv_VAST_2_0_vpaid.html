@@ -73,7 +73,7 @@
                 <!-- Date/Time -->
                 <p><span class="glyphicon glyphicon-time"></span> Created by H Code Media</p>
 
-                <h1>LKQD Test Page</h1>
+                <h1>AdapTV - Mobile</h1>
 
                 <hr>
 
@@ -91,8 +91,8 @@
 								{
 								  var playerContainerId = 'lkqd_outstream_incontent';
 								  var playerId = '';
-								  var playerWidth = '300';
-								  var playerHeight = '250';
+								  var playerWidth = '600';
+								  var playerHeight = '480';
 								  var playInitiation = 'auto';
 								  var volume = '0';
 								  var execution = 'outstream';
@@ -125,7 +125,7 @@
 								  vpaidFrame.style.display = 'none';
 								  var vpaidFrameLoaded = function() {
 									vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
-									vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=69223&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros) + '&close=true';
+									vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=111113&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros) + '&close=true';
 
 									vpaidLoader.onload = function() {
 									  lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
@@ -229,16 +229,6 @@
                     <h4>Blog Categories</h4>
                     <div class="row">
                         <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="slider.html">Slider Unit</a>
-                                </li>
-                                <li><a href="Slider_with_new_tags.html">New Slider Tag (1x1 defined)</a>
-                                </li>
-                                <li><a href="lkqd_outstream_incontent.html">Outstream Incontent</a>
-                                </li>
-                                <li><a href="lkqd_outstream_incontent_1x1_undefined.html">Outstream Incontent 1x1 undefined</a>
-                                </li>
-                            </ul>
                         </div>
                         <div class="col-lg-6">
                             <ul class="list-unstyled">

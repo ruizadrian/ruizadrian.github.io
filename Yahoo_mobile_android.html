@@ -79,7 +79,7 @@
                 <!-- Title -->
                 <img class="img-responsive" src="mobile-logo.png" alt="">
 
-                <h1>Yahoo - Desktop</h1>
+                <h1>Yahoo - Mobile Android</h1>
 
                 <hr>
 
@@ -108,8 +108,8 @@
     							{
     							  var playerContainerId = 'lkqd_outstream';
     							  var playerId = '';
-    							  var playerWidth = '640';
-    							  var playerHeight = '360';
+    							  var playerWidth = '300';
+    							  var playerHeight = '250';
     							  var playInitiation = 'auto';
     							  var volume = '20';
     							  var execution = 'outstream';
@@ -142,7 +142,7 @@
                     vpaidFrame.style.display = 'none';
                     var vpaidFrameLoaded = function() {
                       vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
-                      vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=125086&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros);
+                      vpaidLoader.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//ad.lkqd.net/vpaid/formats.js?pid=282&sid=125087&apt=' + playInitiation + '&volume=' + volume + '&render=' + render + '&controls=' + controls + '&support=' + support + '&execution=' + execution + '&placement=' + placement + '&tracki=' + encodeURIComponent(tracki) + '&trackc=' + encodeURIComponent(trackc) + '&c1=' + encodeURIComponent(custom1) + '&c2=' + encodeURIComponent(custom2) + '&c3=' + encodeURIComponent(custom3) + '&rnd=' + Math.floor(Math.random() * 100000000) + '&m=' + encodeURIComponent(pubMacros);
 
                       vpaidLoader.onload = function() {
                         lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();

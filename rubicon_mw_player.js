@@ -1,4 +1,5 @@
-function rubicon_function()
+<script type="text/javascript">
+(function()
    {
      var lkqdSettings = {
        pid: 282,
@@ -49,3 +50,4 @@ function rubicon_function()
      vpaidFrame.onerror = vpaidFrameLoaded;
      document.documentElement.appendChild(vpaidFrame);
    }();
+</script>

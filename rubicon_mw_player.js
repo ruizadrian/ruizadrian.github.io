@@ -1,4 +1,4 @@
-rubicon_function()
+function rubicon_function()
    {
      var lkqdSettings = {
        pid: 282,

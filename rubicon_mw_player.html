@@ -23,7 +23,7 @@
                         playerHeight: '',
                         execution: 'interstitial',
                         placement: '',
-                        playInitiation: 'user',
+                        playInitiation: 'auto',
                         volume: 100,
                         trackImp: '',
                         trackClick: '',
@@ -39,10 +39,10 @@
                       var creativeData = '';
                       var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
 
-                      function onVPAIDLoad()
-                      {
-                        lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
-                      }
+                      // function onVPAIDLoad()
+                      // {
+                      //   lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+                      // }
 
                       var vpaidFrame = document.createElement('iframe');
                       vpaidFrame.id = lkqdSettings.lkqdId;

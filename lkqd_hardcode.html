@@ -196,11 +196,34 @@
  -->
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
-
+                <div class="celtra-ad-v3">
+                      <!-- externalCreativeId  = raw %ecid! -->
+                      <!-- externalPlacementId = raw %epid! -->
+                      <!-- externalSiteId      = raw %esid! -->
+                      <!-- externalSiteName    = raw %%SITE%% -->
+                      <!-- externalLineItemId  = raw %eaid! -->
+                      <img src="data:image/png,celtra" style="display: none" onerror="
+                          (function(img) {
+                              var params = {'clickUrl':'%%CLICK_URL_UNESC%%','expandDirection':'undefined','preferredClickThroughWindow':'','textColor':'#FFFFFF','barColor':'#000000','advertisementMessage':'Advertisement','scrollMessage':'Scroll to continue with content','useFullWidth':'1','clickEvent':'advertiser','iosAdvId':'%%ADVERTISING_IDENTIFIER_PLAIN%%','androidAdvId':'%%ADVERTISING_IDENTIFIER_PLAIN%%','externalAdServer':'DFPSmallBusiness','tagVersion':'4'};
+                              [].slice.apply(img.parentNode.childNodes).forEach(function(n) { var decfs = { urldecode: decodeURIComponent, htmldecode: function(v) { var d = document.createElement('div'); d.innerHTML = v; return d.textContent; }, eval: function(v) { return eval(v); }, raw: function(v) { return v; } }; var m; if (n.nodeType == 8 &amp;&amp; (m = n.textContent.match(/^&#92;s+([&#92;w.]+)(&#92;[.+&#92;])?&#92;s+=&#92;s+(&#92;w+)&#92;s+(.*)$/i))) { try { params[m[1]+(m[2] || '')] = decfs[m[3]](m[4].replace(/^&#92;s+|&#92;s+$/g, '')); } catch (e) {} } });
+                              var req = document.createElement('script');
+                              req.id = params.scriptId = 'celtra-script-' + (window.celtraScriptIndex = (window.celtraScriptIndex||0)+1);
+                              params.clientTimestamp = new Date/1000;
+                              params.clientTimeZoneOffsetInMinutes = new Date().getTimezoneOffset();
+                              params.hostPageLoadId = window.celtraHostPageLoadId = (window.celtraHostPageLoadId || (Math.random()+'').slice(2));
+                              var src = (window.location.protocol == 'https:' ? 'https' : 'http') + '://ads.celtra.com/ea814037/web.js?';
+                              for (var k in params) {
+                                  src += '&amp;' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+                              }
+                              req.src = src;
+                              img.parentNode.insertBefore(req, img.nextSibling);
+                          })(this);
+                      "/>
+                  </div>
 
 
                <!-- <div id="lkqd_outstream" class="adFooter"> -->
-               <div id="lkqd_outstream">
+               <!-- <div id="lkqd_outstream">
 
                		<script>
                		// (function()
@@ -310,7 +333,7 @@
 							  document.documentElement.appendChild(vpaidFrame);
 							})();
 					</script>
-               </div>
+               </div> -->
 
 
                <!-- /138871148/ar.lkqd.300x250.collapsable -->

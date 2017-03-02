@@ -89,15 +89,66 @@
 
 
                 <!-- Post Content -->
-                <div id="rubicon_preroll" style="text-align: center">
-                  <!-- <form action="http://www.hcodetestpage.com/rubicon_mw_player.html">
-                      <input style="text-align:center; font-size:10pt;" type="submit" value="PLAY RUBICON INTERSTITIAL" />
-                  </form> -->
-                  <a href="http://www.hcodetestpage.com/rubicon_mw_player.html">
-                  <img border="0" src="vidplayer.jpg" width="300" height="250">
-                  </a>
+                <div id="rubicon_preroll">
+                  <script type="text/javascript">
+                    (function()
+                    {
+                      var lkqdSettings = {
+                        pid: 282,
+                        sid: 197902,
+                        playerContainerId: 'ad' + Math.round(Math.random()*1000000000).toString(),
+                        playerId: '',
+                        playerWidth: 640,
+                        playerHeight: 360,
+                        execution: 'inbanner',
+                        placement: '',
+                        playInitiation: 'auto',
+                        volume: 0,
+                        pageUrl: '',
+                        trackImp: '',
+                        trackClick: '',
+                        custom1: '',
+                        custom2: '',
+                        custom3: '',
+                        pubMacros: '',
+                        dfp: false,
+                        lkqdId: new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString(),
+                        supplyContentVideo: {
+                          url: '', clickurl: '', play: 'pre'
+                        }
+                      };
 
-               </div>
+                      var lkqdVPAID;
+                      var creativeData = '';
+                      if (!document.getElementById(lkqdSettings.playerContainerId)) { try { if (document.readyState && document.readyState != 'complete' && document.readyState != 'interactive'){ document.write('<div id=' + lkqdSettings.playerContainerId + '></div>'); }} catch (e) {}}
+                      var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
+
+                      function onVPAIDLoad()
+                      {
+                        lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+                      }
+
+                      var vpaidFrame = document.createElement('iframe');
+                      vpaidFrame.id = lkqdSettings.lkqdId;
+                      vpaidFrame.name = lkqdSettings.lkqdId;
+                      vpaidFrame.style.display = 'none';
+                      var vpaidFrameLoaded = function() {
+                        vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
+                        vpaidLoader.src = 'https://ad.lkqd.net/vpaid/formats.js?pid=282&sid=197902';
+                        vpaidLoader.onload = function() {
+                          lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
+                          onVPAIDLoad();
+                          lkqdVPAID.handshakeVersion('2.0');
+                          lkqdVPAID.initAd(lkqdSettings.playerWidth, lkqdSettings.playerHeight, 'normal', 600, creativeData, environmentVars);
+                        };
+                        vpaidFrame.contentWindow.document.body.appendChild(vpaidLoader);
+                      };
+                      vpaidFrame.onload = vpaidFrameLoaded;
+                      vpaidFrame.onerror = vpaidFrameLoaded;
+                      document.documentElement.appendChild(vpaidFrame);
+                    })();
+                    </script>
+                </div>
                 <hr>
 
                 <!-- Blog Comments -->

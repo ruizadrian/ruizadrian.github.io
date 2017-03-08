@@ -17,19 +17,10 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-        var closeButton = document.createElement('span')
-        var closeX = "X";
-        closeButton.innerHTML = closeX;
-        var li = document.createElement('li');
-        li.appendChild(closeButton);
-        function close(){
-          closeButton.onclick = function close()){
-              this.parentNode.parentNode.parentNode
-              .removeChild(this.parentNode.parentNode);
-              return false;
-          }
-        }
-			}
+        closeButton = document.createElement('span');
+        closeButton.id = "close";
+        document.getElementById('close').innerHTML = 'X';
+      }
 		}
 	}
 }

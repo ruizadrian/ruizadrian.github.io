@@ -20,6 +20,10 @@ else {
         var btn = document.createElement("BUTTON");
         var t = document.createTextNode("X");
         btn.appendChild(t);
+        btn.style.position = "fixed";
+        btn.style.top = "0px";
+        btn.style.right = "0px";
+        btn.style.zIndex = "200";
         document.body.appendChild(btn);
 			}
 		}

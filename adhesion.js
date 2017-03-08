@@ -17,16 +17,36 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-        var btn = document.createElement("BUTTON");
-        var t = document.createTextNode("X");
-        btn.appendChild(t);
-        document.body.appendChild(btn);
-        btn.style.position = "fixed";
-        btn.style.top = "0px";
-        btn.style.right = "0px";
-        btn.style.zIndex = "200";
+        var closeButton = document.createElement('span')
+        closeButton.innerHTML = 'X';
+        var li = document.createElement('li');
+        li.appendChild(closeButton);
+        function close(){
+          closeButton.onclick = function close()){
+              this.parentNode.parentNode.parentNode
+              .removeChild(this.parentNode.parentNode);
+              return false;
+          }
+        }
 			}
 		}
 	}
 }
 window.onload = updateParentDiv;
+
+
+
+
+// var dateSpan = document.createElement('span')
+// dateSpan.innerHTML = dateString;
+// var li = document.createElement('li');
+// li.appendChild(dateSpan);
+//
+//
+// function closeButton(){
+//     document.getElementById('close').onclick = function closeButton(){
+//         this.parentNode.parentNode.parentNode
+//         .removeChild(this.parentNode.parentNode);
+//         return false;
+//     };
+// };

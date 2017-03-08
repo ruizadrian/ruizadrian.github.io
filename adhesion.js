@@ -18,7 +18,8 @@ else {
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
         var closeButton = document.createElement('span')
-        closeButton.innerHTML = 'X';
+        var closeX = "X";
+        closeButton.innerHTML = closeX;
         var li = document.createElement('li');
         li.appendChild(closeButton);
         function close(){

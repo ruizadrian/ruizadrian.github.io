@@ -1,5 +1,3 @@
-<div id="HCM"></div>
-<script>
 function updateParentDiv() {
 	var tag_id;
 	var el;
@@ -24,4 +22,3 @@ else {
 	}
 }
 window.onload = updateParentDiv;
-</script>

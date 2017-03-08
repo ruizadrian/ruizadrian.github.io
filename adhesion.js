@@ -21,4 +21,11 @@ else {
 		}
 	}
 }
+function closeButton() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode("X");
+    btn.appendChild(t);
+    document.body.appendChild(btn);
+}
 window.onload = updateParentDiv;
+window.onload = closeButton;

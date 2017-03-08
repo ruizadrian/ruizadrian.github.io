@@ -19,7 +19,7 @@ else {
         el.style.zIndex = "100";
         closeButton = document.createElement('span');
         closeButton.id = "close";
-        document.getElementById('close').innerHTML = 'X';
+        document.getElementById('close').innerHTML = 'Xxxxxxdcyiflwycgyuwgdcuywudcgwydgcuwdkgckusyg';
       }
 		}
 	}

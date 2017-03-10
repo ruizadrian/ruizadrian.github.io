@@ -86,18 +86,74 @@
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
 
                 <hr>
+                <div id = "rubicon_mw">
+                  <script>
+                  (function()
+                  {
+                    var lkqdSettings = {
+                      pid: 282,
+                      sid: 183601,
+                      playerContainerId: 'rubicon_mw',
+                      playerId: '',
+                      playerWidth: '',
+                      playerHeight: '',
+                      execution: 'outstream',
+                      placement: 'incontent',
+                      playInitiation: 'auto',
+                      volume: 100,
+                      trackImp: '',
+                      trackClick: '',
+                      custom1: '',
+                      custom2: '',
+                      custom3: '',
+                      pubMacros: '',
+                      dfp: false,
+                      lkqdId: new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString(),
+                    };
 
+                    var lkqdVPAID;
+                    var creativeData = '';
+                    var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
+
+                    function onVPAIDLoad()
+                    {
+                      lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+                      lkqdVPAID.subscribe(function() { lkqdVPAID.pauseAd(); }, 'AdNotViewable');
+                      lkqdVPAID.subscribe(function() { lkqdVPAID.resumeAd(); }, 'AdViewable');
+                    }
+
+                    var vpaidFrame = document.createElement('iframe');
+                    vpaidFrame.id = lkqdSettings.lkqdId;
+                    vpaidFrame.name = lkqdSettings.lkqdId;
+                    vpaidFrame.style.display = 'none';
+                    var vpaidFrameLoaded = function() {
+                      vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
+                      vpaidLoader.src = 'https://ad.lkqd.net/vpaid/formats.js?pid=282&sid=183601';
+                      vpaidLoader.onload = function() {
+                        lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
+                        onVPAIDLoad();
+                        lkqdVPAID.handshakeVersion('2.0');
+                        lkqdVPAID.initAd(lkqdSettings.playerWidth, lkqdSettings.playerHeight, 'normal', 600, creativeData, environmentVars);
+                      };
+                      vpaidFrame.contentWindow.document.body.appendChild(vpaidLoader);
+                    };
+                    vpaidFrame.onload = vpaidFrameLoaded;
+                    vpaidFrame.onerror = vpaidFrameLoaded;
+                    document.documentElement.appendChild(vpaidFrame);
+                  })();
+                  </script>
+                </div>
 
                 <!-- Post Content -->
-                <div id="rubicon_preroll" style="text-align: center">
+                <!-- <div id="rubicon_preroll" style="text-align: center"> -->
                   <!-- <form action="http://www.hcodetestpage.com/rubicon_mw_player.html">
                       <input style="text-align:center; font-size:10pt;" type="submit" value="PLAY RUBICON INTERSTITIAL" />
                   </form> -->
-                  <a href="http://www.hcodetestpage.com/rubicon_mw_player.html">
+                  <!-- <a href="http://www.hcodetestpage.com/rubicon_mw_player.html">
                   <img border="0" src="vidplayer.jpg" width="300" height="250">
                   </a>
 
-               </div>
+               </div> -->
                 <hr>
 
                 <!-- Blog Comments -->

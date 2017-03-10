@@ -1,7 +1,7 @@
 function updateParentDiv() {
 	var tag_id;
 	var el;
-	var closeButton;
+	//var closeButton;
 
 if ( window.self != window.top) {
     el = window.parent.document.getElementsByName(window.self.name) [0];
@@ -19,7 +19,7 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-      	closeButton = window.parent.document.getElementsByName(window.self.name) [1];
+      	var closeButton = el.createElement("span");
 				closeButton.innerHTML = "X";
 				console.log("made it to the end");
       }

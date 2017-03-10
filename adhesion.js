@@ -20,8 +20,7 @@ else {
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
       	closeButton = window.parent.document.getElementsByName(window.self.name) [1];
-				close = closeButton.document.createElement("span");
-				close.innerHTML = "X";
+				closeButton.innerHTML = "X";
 				console.log("made it to the end");
       }
 		}

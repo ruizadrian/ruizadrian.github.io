@@ -22,10 +22,10 @@ else {
 				closeButton = document.getElementById("close");
 				closeButton.innerHTML = "x";
 				closeButton.style.position = 'fixed';
-				closeButton.style.padding = "2px 3px";
+				closeButton.style.padding = "0px 2px 0px";
 				closeButton.style.background = "#CCC";
-				closeButton.style.top = "0px";
-				closeButton.style.right = "0px";
+				closeButton.style.top = "4px";
+				closeButton.style.right = "4px";
 				closeButton.style.zIndex = "500";
 
 				//closeButton.style.backgroundImage = "url('close.png')";

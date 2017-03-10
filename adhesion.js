@@ -37,6 +37,7 @@ else {
 				        this.parentNode.parentNode.parentNode
 				        .removeChild(this.parentNode.parentNode);
 				        return false;
+								console.log("inside close function");
 				    }
 				}
 				console.log("made it to the end");

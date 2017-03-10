@@ -20,13 +20,13 @@ else {
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
 				closeButton = document.getElementById("close");
-				closeButton.innerHTML = "X";
+				closeButton.innerHTML = "Xzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
 				closeButton.style.cssFloat = 'right';
 				closeButton.style.position = 'fixed';
-				closeButton.style.display = 'inline-block';
+				//closeButton.style.display = 'inline-block';
 				//closeButton.style.width = "15px";
 				//closeButton.style.height = "15px";
-				closeButton.style.top = "50px";
+				closeButton.style.top = "0px";
 				//closeButton.style.right = "50px";
 				closeButton.style.zIndex = "500";
 

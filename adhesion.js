@@ -1,6 +1,7 @@
 function updateParentDiv() {
 	var tag_id;
 	var el;
+	var closeButton;
 if ( window.self != window.top) {
     el = window.parent.document.getElementsByName(window.self.name) [0];
 }

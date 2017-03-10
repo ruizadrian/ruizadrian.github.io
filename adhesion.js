@@ -17,7 +17,7 @@ else {
 				el.style.position = 'fixed';
 				el.style.left = "50%";
 				el.style.transform = 'translate(-50%)';
-				el.style.bottom = "0px";
+				el.style.bottom = "10px";
         el.style.zIndex = "100";
       	closeButton = document.getElementById("HCM");
 				closeButton.innerHTML = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";

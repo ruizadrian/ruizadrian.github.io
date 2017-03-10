@@ -19,14 +19,14 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-				closeButton = document.getElementById("HCM");
-				closeButton.innerHTML = "Xzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+				closeButton = document.getElementById("close");
+				closeButton.innerHTML = "X";
 				//closeButton.style.position = 'absolute';
-				// closeButton.style.width = "15px";
-				// closeButton.style.height = "15px";
-				closeButton.style.top = "-100px";
+				//closeButton.style.width = "15px";
+				//closeButton.style.height = "15px";
+				//closeButton.style.top = "-0px";
 				// closeButton.style.right = "50px";
-				closeButton.style.zIndex = "500";
+				//closeButton.style.zIndex = "500";
 
 				//closeButton.style.backgroundImage = "url('http://www.hcodetestpage.com/close.png')";
 				//closeButton.style.backgroundRepeat = "no-repeat";

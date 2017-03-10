@@ -20,16 +20,18 @@ else {
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
 				closeButton = document.getElementById("close");
-				closeButton.innerHTML = "x";
+				//closeButton.innerHTML = "x";
 				closeButton.style.position = 'fixed';
-				closeButton.style.padding = "0px 2px 0px";
-				closeButton.style.background = "#CCC";
-				closeButton.style.top = "4px";
-				closeButton.style.right = "4px";
+				//closeButton.style.padding = "0px 2px 0px";
+				//closeButton.style.background = "#CCC";
+				closeButton.style.top = "3px";
+				closeButton.style.right = "3px";
 				closeButton.style.zIndex = "500";
-
-				//closeButton.style.backgroundImage = "url('close.png')";
-				//closeButton.style.backgroundRepeat = "no-repeat";
+				closeButton.style.backgroundImage = "url('http://www.hcodetestpage.com/close.png')";
+				closeButton.style.backgroundSize = 'contain';
+				closeButton.style.backgroundRepeat = 'no-repeat';
+				closeButton.style.width = "15px";
+				closeButton.style.height = "15px";
 				console.log("made it to the end");
       }
 		}

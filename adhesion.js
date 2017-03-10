@@ -19,8 +19,11 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-      	var closeButton = el.createElement("span");
-				closeButton.innerHTML = "X";
+				var cb = document.getElementById('HCM');
+				var ifrmdocument = cb.contentWindow.document;
+				var spn=ifrmdocument.createElement('span');
+				spn.innerHTML='Hello';
+				ifrmdocument.appendChild(spn);
 				console.log("made it to the end");
       }
 		}

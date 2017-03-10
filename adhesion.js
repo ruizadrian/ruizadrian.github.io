@@ -27,7 +27,7 @@ else {
 				closeButton.style.top = "3px";
 				closeButton.style.right = "3px";
 				closeButton.style.zIndex = "500";
-				closeButton.style.backgroundImage = "url('http://www.hcodetestpage.com/close.png')";
+				closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
 				closeButton.style.backgroundSize = 'contain';
 				closeButton.style.backgroundRepeat = 'no-repeat';
 				closeButton.style.width = "20px";

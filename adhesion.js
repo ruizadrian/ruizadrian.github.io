@@ -30,8 +30,8 @@ else {
 				closeButton.style.backgroundImage = "url('http://www.hcodetestpage.com/close.png')";
 				closeButton.style.backgroundSize = 'contain';
 				closeButton.style.backgroundRepeat = 'no-repeat';
-				closeButton.style.width = "15px";
-				closeButton.style.height = "15px";
+				closeButton.style.width = "20px";
+				closeButton.style.height = "20px";
 				closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
 				console.log("made it to the end");
       }

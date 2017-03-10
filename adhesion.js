@@ -20,13 +20,12 @@ else {
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
 				closeButton = document.getElementById("close");
-				closeButton.innerHTML = "X";
-				closeButton.style.cssFloat = 'right';
+				closeButton.innerHTML = "x";
 				closeButton.style.position = 'fixed';
-				closeButton.style.padding = "3px 3px";
+				closeButton.style.padding = "2px 3px";
 				closeButton.style.background = "#CCC";
 				closeButton.style.top = "0px";
-				//closeButton.style.right = "50px";
+				closeButton.style.right = "0px";
 				closeButton.style.zIndex = "500";
 
 				//closeButton.style.backgroundImage = "url('close.png')";

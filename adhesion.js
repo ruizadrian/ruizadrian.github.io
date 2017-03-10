@@ -22,6 +22,7 @@ else {
 				closeButton = document.getElementById("close");
 				closeButton.innerHTML = "X";
 				closeButton.style.cssFloat = 'right';
+				closeButton.style.display = 'inline-block';
 				//closeButton.style.width = "15px";
 				//closeButton.style.height = "15px";
 				//closeButton.style.top = "-0px";

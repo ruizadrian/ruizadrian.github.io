@@ -17,11 +17,11 @@ else {
 				el.style.position = 'fixed';
 				el.style.left = "50%";
 				el.style.transform = 'translate(-50%)';
-				el.style.bottom = "10px";
+				el.style.bottom = "0px";
         el.style.zIndex = "100";
-      	closeButton = document.getElementById("HCM");
-				closeButton.innerHTML = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
-				closeButton.style.zIndex = "200";
+      	closeButton = window.parent.document.getElementsByName(window.self.name) [1];
+				close = closeButton.document.createElement("span");
+				close.innerHTML = "X";
 				console.log("made it to the end");
       }
 		}
@@ -29,6 +29,10 @@ else {
 }
 window.onload = updateParentDiv;
 
+
+// closeButton = document.getElementById("HCM");
+// closeButton.innerHTML = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+// closeButton.style.zIndex = "200";
 
 // closeButton = document.createElement('span');
 // closeButton.id = "close";

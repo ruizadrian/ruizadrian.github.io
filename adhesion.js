@@ -32,7 +32,7 @@ else {
 				closeButton.style.backgroundRepeat = 'no-repeat';
 				closeButton.style.width = "15px";
 				closeButton.style.height = "15px";
-				closeButton.onclick = function() {this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false; console.log("closed the ad");};
+				closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false; console.log("closed the ad");};
 				console.log("made it to the end");
       }
 		}

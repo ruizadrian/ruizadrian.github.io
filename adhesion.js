@@ -18,7 +18,7 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-        closeButton = el.createElement('span');
+        closeButton = window.parent.document.createElement('span');
         closeButton.id = "close";
         closeButton.innerHTML = 'Xzxzxzxzxzxzxzxzxzxzxzxzxzxacdcdvcsdvcasvcasfvasfvsafvasfvasfvasfv';
 				console.log("made it to the end");

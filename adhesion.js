@@ -32,18 +32,18 @@ else {
 				closeButton.style.backgroundRepeat = 'no-repeat';
 				closeButton.style.width = "15px";
 				closeButton.style.height = "15px";
-				function closeAd(){
-				    closeButton.onclick = function closeAd(){
-				        this.parentNode.parentNode.parentNode
-				        .removeChild(this.parentNode.parentNode);
-				        return false;
-								console.log("inside close function");
-				    }
-				}
 				console.log("made it to the end");
       }
 		}
 	}
+}
+function closeAd(){
+		document.getElementById('close').onclick = function closeAd(){
+				this.parentNode.parentNode.parentNode
+				.removeChild(this.parentNode.parentNode);
+				return false;
+				console.log("inside close function");
+		}
 }
 window.onload = updateParentDiv;
 

@@ -28,7 +28,7 @@ else {
 				//closeButton.style.right = "50px";
 				closeButton.style.zIndex = "500";
 
-				closeButton.style.backgroundImage = "url('http://www.hcodetestpage.com/close.png')";
+				closeButton.style.backgroundImage = "url('close.png')";
 				//closeButton.style.backgroundRepeat = "no-repeat";
 				console.log("made it to the end");
       }

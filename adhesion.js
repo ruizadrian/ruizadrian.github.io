@@ -21,6 +21,7 @@ else {
         el.style.zIndex = "100";
       	closeButton = document.getElementById("HCM");
 				closeButton.innerHTML = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+				closeButton.style.zIndex = "200";
 				console.log("made it to the end");
       }
 		}

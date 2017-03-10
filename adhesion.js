@@ -32,14 +32,7 @@ else {
 				closeButton.style.backgroundRepeat = 'no-repeat';
 				closeButton.style.width = "15px";
 				closeButton.style.height = "15px";
-				window.onload = function closeAd(){
-						document.getElementById('HCM').onclick = function closeAd(){
-								this.parentNode.parentNode.parentNode
-								.removeChild(this.parentNode.parentNode);
-								return false;
-								console.log("inside close function");
-						}
-				}
+				closeButton.onclick = 'this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;'
 				console.log("made it to the end");
       }
 		}
@@ -77,3 +70,12 @@ window.onload = updateParentDiv;
 //         return false;
 //     };
 // };
+
+// window.onload = function closeAd(){
+// 		document.getElementById('HCM').onclick = function closeAd(){
+// 				this.parentNode.parentNode.parentNode
+// 				.removeChild(this.parentNode.parentNode);
+// 				return false;
+// 				console.log("inside close function");
+// 		}
+// }

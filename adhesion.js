@@ -33,7 +33,7 @@ else {
 				closeButton.style.width = "15px";
 				closeButton.style.height = "15px";
 				function closeAd(){
-				    document.getElementById('close').onclick = function closeAd(){
+				    closeButton.onclick = function closeAd(){
 				        this.parentNode.parentNode.parentNode
 				        .removeChild(this.parentNode.parentNode);
 				        return false;

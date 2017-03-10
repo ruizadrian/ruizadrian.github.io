@@ -1,7 +1,7 @@
 function updateParentDiv() {
 	var tag_id;
 	var el;
-	//var closeButton;
+	var closeButton;
 
 if ( window.self != window.top) {
     el = window.parent.document.getElementsByName(window.self.name) [0];
@@ -19,11 +19,15 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-				var cb = document.getElementById('HCM');
-				var ifrmdocument = cb.contentWindow.document;
-				var spn=ifrmdocument.createElement('span');
-				spn.innerHTML='Hello';
-				ifrmdocument.appendChild(spn);
+				closeButton = document.getElementById("HCM");
+				closeButton.style.position = "absolute";
+				closeButton.style.width = "15px";
+				closeButton.style.height = "15px";
+				closeButton.style.top = "0px";
+				closeButton.style.right = "50px";
+				closeButton.style.zIndex = "500";
+				closeButton.style.backgroundImage = "url('close.png')";
+				closeButton.style.backgroundRepeat = "no-repeat";
 				console.log("made it to the end");
       }
 		}

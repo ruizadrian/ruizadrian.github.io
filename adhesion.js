@@ -18,9 +18,9 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-        closeButton = document.createElement('span');
+        closeButton = el.createElement('span');
         closeButton.id = "close";
-        el.innerHTML = 'Xzxzxzxzxzxzxzxzxzxzxzxzxzxacdcdvcsdvcasvcasfvasfvsafvasfvasfvasfv';
+        closeButton.innerHTML = 'Xzxzxzxzxzxzxzxzxzxzxzxzxzxacdcdvcsdvcasvcasfvasfvsafvasfvasfvasfv';
 				console.log("made it to the end");
       }
 		}

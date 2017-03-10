@@ -20,7 +20,7 @@ else {
         el.style.zIndex = "100";
         closeButton = document.createElement('span');
         closeButton.id = "close";
-        closeButton.innerHTML = 'Xzxzxzxzxzxzxzxzxzxzxzxzxzxacdcdvcsdvcasvcasfvasfvsafvasfvasfvasfv';
+        el.innerHTML = 'Xzxzxzxzxzxzxzxzxzxzxzxzxzxacdcdvcsdvcasvcasfvasfvsafvasfvasfvasfv';
 				console.log("made it to the end");
       }
 		}

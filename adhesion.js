@@ -1,7 +1,7 @@
 function updateParentDiv() {
 	var tag_id;
 	var el;
-	//var closeButton;
+	var closeButton;
 
 if ( window.self != window.top) {
     el = window.parent.document.getElementsByName(window.self.name) [0];
@@ -19,7 +19,7 @@ else {
 				el.style.transform = 'translate(-50%)';
 				el.style.bottom = "0px";
         el.style.zIndex = "100";
-				var closeButton = document.getElementById("HCM");
+				closeButton = document.getElementById("HCM");
 				closeButton.innerHTML = "Xzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
 				//closeButton.style.position = 'absolute';
 				// closeButton.style.width = "15px";

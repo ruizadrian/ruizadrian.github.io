@@ -46,6 +46,7 @@ function closeAd(){
 		}
 }
 window.onload = updateParentDiv;
+window.onload = closeAd;
 
 
 // closeButton = document.getElementById("HCM");

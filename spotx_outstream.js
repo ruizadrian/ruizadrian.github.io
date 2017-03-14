@@ -26,7 +26,7 @@ else {
 		if (el.tagName == 'DIV') {
 			tag_id = el.id;
 			if( tag_id.indexOf("div-gpt-ad") >= 0){
-        alert(el.tag_id));
+        alert(el.id));
         // <script type="text/javascript">
         //     function myAdDoneFunction(spotx_ad_found)  {
         //         if(spotx_ad_found)  {

@@ -7,7 +7,7 @@ if ( window.self != window.top) {
 
     // Reference iFrame
     el.height = "60px";
-    el.width = "340px";
+    el.width = "320px";
     // el.style.zIndex = "900";
 
 

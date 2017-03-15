@@ -21,6 +21,17 @@ else {
 }
 	while (el.parentNode) {
 		el = el.parentNode;
+		closeButton = document.getElementById("close");
+		closeButton.style.position = 'fixed';
+		closeButton.style.top = "0px";
+		closeButton.style.right = "5px";
+		closeButton.style.zIndex = "1000";
+		closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
+		closeButton.style.backgroundSize = 'contain';
+		closeButton.style.backgroundRepeat = 'no-repeat';
+		closeButton.style.width = "18px";
+		closeButton.style.height = "18px";
+		closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
 		if (el.tagName == 'DIV') {
 			tag_id = el.id;
 			if( tag_id.indexOf("div-gpt-ad") >= 0){
@@ -34,17 +45,17 @@ else {
 			    // el.style.width = "340px";
 
 
-			    closeButton = document.getElementById("close");
-			    closeButton.style.position = 'fixed';
-			    closeButton.style.top = "0px";
-			    closeButton.style.right = "5px";
-			    closeButton.style.zIndex = "1000";
-			    closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
-			    closeButton.style.backgroundSize = 'contain';
-			    closeButton.style.backgroundRepeat = 'no-repeat';
-			    closeButton.style.width = "18px";
-			    closeButton.style.height = "18px";
-			    closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
+			    // closeButton = document.getElementById("close");
+			    // closeButton.style.position = 'fixed';
+			    // closeButton.style.top = "0px";
+			    // closeButton.style.right = "5px";
+			    // closeButton.style.zIndex = "1000";
+			    // closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
+			    // closeButton.style.backgroundSize = 'contain';
+			    // closeButton.style.backgroundRepeat = 'no-repeat';
+			    // closeButton.style.width = "18px";
+			    // closeButton.style.height = "18px";
+			    // closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
 			}
 		}
 	}

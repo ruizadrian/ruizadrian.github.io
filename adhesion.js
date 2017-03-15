@@ -6,8 +6,8 @@ if ( window.self != window.top) {
     el = window.parent.document.getElementsByName(window.self.name) [0];
 
     // Reference iFrame
-    // el.height = "60px";
-    // el.width = "340px";
+    el.height = "60px";
+    el.width = "340px";
     // el.style.zIndex = "900";
 
 
@@ -29,7 +29,7 @@ else {
 			    el.style.transform = 'translate(-50%)';
 			    el.style.bottom = "-10px";
 		      el.style.zIndex = "800";
-			    el.style.height = "60px";
+			    //el.style.height = "60px";
 			    // el.style.width = "340px";
 
 

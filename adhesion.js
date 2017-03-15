@@ -23,7 +23,7 @@ else {
 		el = el.parentNode;
 		closeButton = document.getElementById("close");
 		closeButton.style.position = 'fixed';
-		closeButton.style.top = "0px";
+		closeButton.style.top = "-10px";
 		closeButton.style.right = "5px";
 		closeButton.style.zIndex = "1000";
 		closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";

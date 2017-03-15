@@ -35,14 +35,14 @@ else {
 
 			    closeButton = document.getElementById("close");
 			    closeButton.style.position = 'fixed';
-			    closeButton.style.top = "0px";
-			    closeButton.style.right = "0px";
+			    closeButton.style.top = "3px";
+			    closeButton.style.right = "3px";
 			    closeButton.style.zIndex = "1000";
 			    closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
 			    closeButton.style.backgroundSize = 'contain';
 			    closeButton.style.backgroundRepeat = 'no-repeat';
-			    closeButton.style.width = "20px";
-			    closeButton.style.height = "20px";
+			    closeButton.style.width = "17px";
+			    closeButton.style.height = "17px";
 			    closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
 			}
 		}

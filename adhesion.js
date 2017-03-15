@@ -29,20 +29,20 @@ else {
 			    el.style.transform = 'translate(-50%)';
 			    el.style.bottom = "0px";
 		      el.style.zIndex = "800";
-			    // el.style.height = "60px";
+			    el.style.height = "60px";
 			    // el.style.width = "340px";
 
 
 			    closeButton = document.getElementById("close");
 			    closeButton.style.position = 'fixed';
-			    closeButton.style.top = "3px";
-			    closeButton.style.right = "3px";
+			    closeButton.style.top = "0px";
+			    closeButton.style.right = "5px";
 			    closeButton.style.zIndex = "1000";
 			    closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/close.png')";
 			    closeButton.style.backgroundSize = 'contain';
 			    closeButton.style.backgroundRepeat = 'no-repeat';
-			    closeButton.style.width = "17px";
-			    closeButton.style.height = "17px";
+			    closeButton.style.width = "18px";
+			    closeButton.style.height = "18px";
 			    closeButton.onclick = function() {this.parentNode.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode.parentNode); return false; console.log("closed the ad");};
 			}
 		}

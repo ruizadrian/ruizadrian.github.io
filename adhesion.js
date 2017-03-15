@@ -23,7 +23,7 @@ if ( window.self != window.top) {
 
 
     // Reference iFrame
-    // window.self.document.getElementsByTagName("body")[0].style.margin="10px 0px 0px 0px";
+    window.self.document.getElementsByTagName("body")[0].style.margin="10px 0px 0px 0px";
     // window.self.document.getElementsByTagName("body")[0].style.padding="0px";
 
 }
@@ -41,7 +41,7 @@ else {
 			    el.style.transform = 'translate(-50%)';
 			    el.style.bottom = "0px";
 		      el.style.zIndex = "800";
-					el.style.margin = "10px 0px 0px 0px";
+					//el.style.margin = "10px 0px 0px 0px";
 					//el.style.padding = "10px 0px 0px 0px"
 			    el.style.height = "50px";
 			    el.style.width = "320px";

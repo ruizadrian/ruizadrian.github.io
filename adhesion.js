@@ -27,7 +27,7 @@ else {
 			    el.style.position = 'fixed';
 			    el.style.left = "50%";
 			    el.style.transform = 'translate(-50%)';
-			    el.style.bottom = "-10px";
+			    el.style.bottom = "0px";
 		      el.style.zIndex = "800";
 			    //el.style.height = "60px";
 			    // el.style.width = "340px";

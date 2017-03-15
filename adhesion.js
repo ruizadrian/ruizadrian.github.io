@@ -42,8 +42,8 @@ else {
 			    el.style.bottom = "0px";
 		      el.style.zIndex = "800";
 					el.style.padding = "10px 0px 0px 0px"
-			    //el.style.height = "60px";
-			    // el.style.width = "340px";
+			    el.style.height = "50px";
+			    el.style.width = "320px";
 
 
 			    // closeButton = document.getElementById("close");

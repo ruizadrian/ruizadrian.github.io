@@ -106,7 +106,7 @@
                     var lkqdSettings = {
                       pid: 282,
                       sid: 69223,
-                      playerContainerId: 'div-gpt-ad-1489615584377-0',
+                      //playerContainerId: 'div-gpt-ad-1489615584377-0',
                       playerId: '',
                       playerWidth: '',
                       playerHeight: '',
@@ -126,7 +126,8 @@
 
                     var lkqdVPAID;
                     var creativeData = '';
-                    var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
+                    var findDivName = document.querySelector('[id^="gpt_unit_"]');
+                    var environmentVars = { slot: document.getElementById(findDivName), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
 
                     function onVPAIDLoad()
                     {

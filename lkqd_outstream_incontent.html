@@ -127,6 +127,8 @@
                     var lkqdVPAID;
                     var creativeData = '';
                     var findDivName = document.querySelector('[id^="div-gpt-ad"]');
+                    findDivName.style.width = '640px';
+                    findDivName.style.height = '360px';
                     var environmentVars = { slot: findDivName, videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
 
                     function onVPAIDLoad()

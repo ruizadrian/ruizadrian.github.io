@@ -36,8 +36,8 @@ demo styles
 	right: 20px;
 	padding: 7px;
 	position: fixed;
-	width: 500px;
-	z-index: 1;
+	width: 25%;
+	z-index: 999999999;
 }
 
 

@@ -115,7 +115,7 @@
                 // returns the current y scroll position
                 function getScrollTop() {
                   var docEl = document.documentElement;
-                  return (window.pageYOffset + 1000px || docEl.scrollTop) - (docEl.clientTop || 0);
+                  return ((window.pageYOffset) || docEl.scrollTop) - (docEl.clientTop || 0);
                 }
 
                 // configure jwplayer instance

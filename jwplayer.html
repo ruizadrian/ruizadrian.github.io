@@ -74,7 +74,7 @@
                 <!-- Title -->
                 <img class="img-responsive" src="mobile-logo.png" alt="">
 
-                <h1>JW Player - Test 1</h1>
+                <h1>JW Player - Test Page: 1</h1>
 
                 <hr>
 
@@ -94,6 +94,8 @@
                     </div>
                 </div>
                 <div>Player Bottom</div>
+
+
                 <script type="text/javascript">
 
                 // initialize jwplayer
@@ -115,7 +117,7 @@
                 // returns the current y scroll position
                 function getScrollTop() {
                   var docEl = document.documentElement;
-                  return ((window.pageYOffset) || docEl.scrollTop) - (docEl.clientTop || 0);
+                  return ((window.pageYOffset + 999999999) || (docEl.scrollTop) - (docEl.clientTop || 0));
                 }
 
                 // configure jwplayer instance
@@ -167,7 +169,21 @@
                         var isScrollTimeout = false;
 
                         // window onscroll event handler
-                        window.onscroll = function() {
+                        // window.onscroll = function() {
+                        //     // skip if we're waiting on a scroll update timeout to finish
+                        //     if (isScrollTimeout) return;
+                        //     // flag that a new timeout will begin
+                        //     isScrollTimeout = true;
+                        //     // otherwise, call scroll event view handler
+                        //     onScrollViewHandler();
+                        //     // set new timeout
+                        //     setTimeout(function() {
+                        //         // reset timeout flag to false (no longer waiting)
+                        //         isScrollTimeout = false;
+                        //     }, 80);
+
+                        // };
+                        window.onload = function() {
                             // skip if we're waiting on a scroll update timeout to finish
                             if (isScrollTimeout) return;
                             // flag that a new timeout will begin

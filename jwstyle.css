@@ -37,6 +37,7 @@ demo styles
 	padding: 7px;
 	position: fixed;
 	height: 25%;
+	width: 400px;
 	z-index: 999999999;
 }
 

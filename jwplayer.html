@@ -168,21 +168,6 @@
                         // namespace for whether or not we are waiting for setTimeout() to finish
                         var isScrollTimeout = false;
 
-                        // window onscroll event handler
-                        // window.onscroll = function() {
-                        //     // skip if we're waiting on a scroll update timeout to finish
-                        //     if (isScrollTimeout) return;
-                        //     // flag that a new timeout will begin
-                        //     isScrollTimeout = true;
-                        //     // otherwise, call scroll event view handler
-                        //     onScrollViewHandler();
-                        //     // set new timeout
-                        //     setTimeout(function() {
-                        //         // reset timeout flag to false (no longer waiting)
-                        //         isScrollTimeout = false;
-                        //     }, 80);
-
-                        // };
                         window.onload = function() {
                             // skip if we're waiting on a scroll update timeout to finish
                             if (isScrollTimeout) return;

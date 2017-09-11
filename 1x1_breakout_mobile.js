@@ -64,6 +64,30 @@ function updateParentDiv() {
     frame.style.zIndex = "2147483640 !important";
     frame.style.display = "block !important";
 
+    var tag_id;
+    var parentDiv = frame.parentNode;
+    if (parentDiv.tagName == 'DIV') {
+        tag_id = parentDiv.id;
+        if( tag_id.indexOf("google_ads_iframe_") >= 0){
+           parentDiv.style.setProperty ("display", "block", "important");
+        }
+    }
+
+    var HCM_Div = document.getElementById('JWHCM');
+    var gptDiv = HCM_Div.parentNode;
+
+    if (gptDiv.tagName == 'DIV') {
+        tag_id = gptDiv.id;
+        if( tag_id.indexOf("gpt_unit_") >= 0){
+            gptDiv.style.setProperty ("display", "block", "important");
+            gptDiv.style.setProperty ("position", "fixed", "important");
+            gptDiv.style.setProperty ("bottom", "0px", "important");
+            gptDiv.style.setProperty ("right", "0px", "important");
+            gptDiv.height = "300px";
+            gptDiv.width = "500px";
+        }
+    }
+
     setTimeout(function() { buttonCreator(); }, 10000);
 
 

@@ -18,9 +18,9 @@ function close_func() {
 function buttonCreator(){
     var closeButton = document.createElement("span");
     closeButton.id = "closeButton";
-    console.log("Button span created");
-    console.log("closeButton ID: "+closeButton.id);
-    console.log("closeButton element type: "+closeButton.nodeName);
+    // console.log("Button span created");
+    // console.log("closeButton ID: "+closeButton.id);
+    // console.log("closeButton element type: "+closeButton.nodeName);
     closeButton.style.position = 'fixed';
     closeButton.style.top = "5px";
     closeButton.style.left = "5px";
@@ -53,20 +53,55 @@ function updateParentDiv() {
 		break;
         } catch(e) {}
     }
-    //alert(frame.id);
 
     frame.style.setProperty ("position", "fixed", "important");
     frame.style.setProperty ("bottom", "0px", "important");
     frame.style.setProperty ("right", "0px", "important");
 
-    // frame.height = "300px";
-    // frame.width = "500px";
-
-    frame.style.height = "300px";
-    frame.style.width = "500px";
+    frame.height = "300px";
+    frame.width = "500px";
     
     frame.style.setProperty ("display", "block", "important"); 
     frame.style.setProperty ("z-index", "2147483640", "important");
+    //alert(frame.id);
+
+    var tag_id;
+    var parentDiv = frame.parentNode;
+    if (parentDiv.tagName == 'DIV') {
+        tag_id = parentDiv.id;
+        if( tag_id.indexOf("google_ads_iframe_") >= 0){
+            parentDiv.style.setProperty ("display", "block", "important");
+            parentDiv.style.setProperty ("position", "fixed", "important");
+            parentDiv.style.setProperty ("bottom", "0px", "important");
+            parentDiv.style.setProperty ("right", "0px", "important");
+            parentDiv.height = "300px";
+            parentDiv.width = "500px";
+        }
+    }
+
+    var HCM_Div = document.getElementById('JWHCM');
+    var gptDiv = HCM_Div.parentNode;
+
+    if (gptDiv.tagName == 'DIV') {
+        tag_id = gptDiv.id;
+        if( tag_id.indexOf("gpt_unit_") >= 0){
+            gptDiv.style.setProperty ("display", "block", "important");
+            gptDiv.style.setProperty ("position", "fixed", "important");
+            gptDiv.style.setProperty ("bottom", "0px", "important");
+            gptDiv.style.setProperty ("right", "0px", "important");
+            gptDiv.height = "300px";
+            gptDiv.width = "500px";
+        }
+    }
+
+    // var tag_id;
+    // var parentDiv = frame.parentNode;
+    // if (parentDiv.tagName == 'DIV') {
+    //     tag_id = parentDiv.id;
+    //     if( tag_id.indexOf("google_ads_iframe_") >= 0){
+    //        parentDiv.style.setProperty ("display", "block", "important");
+    //     }
+    // }
 
     setTimeout(function() { buttonCreator(); }, 10000);
 

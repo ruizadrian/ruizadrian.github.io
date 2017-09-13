@@ -1,6 +1,5 @@
 function close_func() {
     var frame;
-
     var w= document.defaultView || document.parentWindow;
     var frames= w.parent.document.getElementsByTagName('iframe');
     for (var i= frames.length; i-->0;) {
@@ -12,15 +11,11 @@ function close_func() {
         } catch(e) {}
     }
     frame.remove();
-
 }
 
 function buttonCreator(){
     var closeButton = document.createElement("span");
     closeButton.id = "closeButton";
-    // console.log("Button span created");
-    // console.log("closeButton ID: "+closeButton.id);
-    // console.log("closeButton element type: "+closeButton.nodeName);
     closeButton.style.position = 'fixed';
     closeButton.style.top = "5px";
     closeButton.style.left = "5px";
@@ -32,7 +27,6 @@ function buttonCreator(){
     closeButton.style.height = "15px";
     closeButton.onclick = function() {close_func();} ;
     document.body.appendChild(closeButton);
-
 }
 
 function updateParentDiv() {
@@ -63,7 +57,6 @@ function updateParentDiv() {
     
     frame.style.setProperty ("display", "block", "important"); 
     frame.style.setProperty ("z-index", "2147483640", "important");
-    //alert(frame.id);
 
     var tag_id;
     var parentDiv = frame.parentNode;
@@ -81,6 +74,7 @@ function updateParentDiv() {
 
     var HCM_Div = document.getElementById('JWHCM');
     var gptDiv = HCM_Div.parentNode;
+    var gptDiv2 = HCM_Div.parentNode;
 
     if (gptDiv.tagName == 'DIV') {
         tag_id = gptDiv.id;
@@ -94,19 +88,21 @@ function updateParentDiv() {
         }
     }
 
-    // var tag_id;
-    // var parentDiv = frame.parentNode;
-    // if (parentDiv.tagName == 'DIV') {
-    //     tag_id = parentDiv.id;
-    //     if( tag_id.indexOf("google_ads_iframe_") >= 0){
-    //        parentDiv.style.setProperty ("display", "block", "important");
-    //     }
-    // }
+    if (gptDiv2.tagName == 'DIV') {
+        tag_id = gptDiv2.id;
+        if( tag_id.indexOf("google_ads_iframe_") >= 0){
+            gptDiv2.style.setProperty ("display", "block", "important");
+            gptDiv2.style.setProperty ("position", "fixed", "important");
+            gptDiv2.style.setProperty ("bottom", "0px", "important");
+            gptDiv2.style.setProperty ("right", "0px", "important");
+            gptDiv2.height = "300px";
+            gptDiv2.width = "500px";
+        }
+    }
 
     setTimeout(function() { buttonCreator(); }, 10000);
 
 }
-//alert("before onload");
 
 window.onloadFuncs = [];
 

@@ -1,6 +1,5 @@
 function close_func() {
     var frame;
-
     var w= document.defaultView || document.parentWindow;
     var frames= w.parent.document.getElementsByTagName('iframe');
     for (var i= frames.length; i-->0;) {
@@ -18,9 +17,6 @@ function close_func() {
 function buttonCreator(){
     var closeButton = document.createElement("span");
     closeButton.id = "closeButton";
-    console.log("Button span created");
-    console.log("closeButton ID: "+closeButton.id);
-    console.log("closeButton element type: "+closeButton.nodeName);
     closeButton.style.position = 'fixed';
     closeButton.style.top = "5px";
     closeButton.style.left = "5px";
@@ -54,15 +50,15 @@ function updateParentDiv() {
         } catch(e) {}
     }
     //alert(frame.id);
-    frame.style.position = "fixed !important";
-    frame.style.bottom = "0px !important";
-    frame.style.right = "0px !important";
+    frame.style.setProperty ("position", "fixed", "important");
+    frame.style.setProperty ("bottom", "0px", "important");
+    frame.style.setProperty ("right", "0px", "important");
 
-    frame.height = "170px !important";
-    frame.width = "300px !important"; 
-
-    frame.style.zIndex = "2147483640 !important";
-    frame.style.display = "block !important";
+    frame.height = "170px";
+    frame.width = "300px";
+    
+    frame.style.setProperty ("display", "block", "important"); 
+    frame.style.setProperty ("z-index", "2147483640", "important");
 
     var tag_id;
     var parentDiv = frame.parentNode;
@@ -75,6 +71,7 @@ function updateParentDiv() {
 
     var HCM_Div = document.getElementById('JWHCM');
     var gptDiv = HCM_Div.parentNode;
+    var gptDiv2 = HCM_Div.parentNode;
 
     if (gptDiv.tagName == 'DIV') {
         tag_id = gptDiv.id;
@@ -83,19 +80,28 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("position", "fixed", "important");
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
-            gptDiv.height = "300px";
-            gptDiv.width = "500px";
+            gptDiv.height = "170px";
+            gptDiv.width = "300px";
+        }
+    }
+
+    if (gptDiv2.tagName == 'DIV') {
+        tag_id = gptDiv2.id;
+        if( tag_id.indexOf("google_ads_iframe_") >= 0){
+            gptDiv2.style.setProperty ("display", "block", "important");
+            gptDiv2.style.setProperty ("position", "fixed", "important");
+            gptDiv2.style.setProperty ("bottom", "0px", "important");
+            gptDiv2.style.setProperty ("right", "0px", "important");
+            gptDiv2.height = "170px";
+            gptDiv2.width = "300px";
         }
     }
 
     setTimeout(function() { buttonCreator(); }, 10000);
 
-
 }
-//alert("before onload");
 
 window.onloadFuncs = [];
-
 window.onload = function(){
     for (var i in this.onloadFuncs){
         this.onloadFuncs[i]();

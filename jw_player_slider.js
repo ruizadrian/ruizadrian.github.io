@@ -17,11 +17,17 @@
 
 // playerInstance.setup({
 //   autostart: true,
-//   autoplayadsmuted: true,
-//   primary: 'html5',
-//   setFullscreen: true,
-//   width: '100%'
+//   autoplayadsmuted: true
 // });
+
+// function createPlayer() {
+//   var playerInstance = jwplayer('player');
+    playerInstance.setup({
+      file:"//content.jwplatform.com/players/37CatBvi-glHht3g1.js",
+      autostart: true,
+      autoplayadsmuted: true
+    }); 
+// }
 
 // playerInstance.on('ready', function() {
 //   var config = playerInstance.getConfig();

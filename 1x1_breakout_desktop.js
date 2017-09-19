@@ -18,8 +18,8 @@ function buttonCreator(){
     closeButton.id = "closeButton";
     closeButton.style.position = 'fixed';
     closeButton.style.top = "5px";
-    closeButton.style.left = "5px";
-    closeButton.style.zIndex = "2147483645";
+    closeButton.style.right = "5px";
+    closeButton.style.zIndex = "2147483647";
     closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
     closeButton.style.backgroundSize = 'contain';
     closeButton.style.backgroundRepeat = 'no-repeat';
@@ -56,7 +56,7 @@ function updateParentDiv() {
     frame.width = "500px";
     
     frame.style.setProperty ("display", "block", "important"); 
-    frame.style.setProperty ("z-index", "2147483640", "important");
+    frame.style.setProperty ("z-index", "2147483646", "important");
 
     var tag_id;
     var parentDiv = frame.parentNode;

@@ -17,24 +17,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" type="image/x-icon" href="http://hcodemedia.com/wp-content/uploads/2015/08/fav.png">
-    <link rel="apple-touch-icon" href="http://hcodemedia.com/wp-content/uploads/2015/08/fav.png"/>
+	<link rel="apple-touch-icon" href="http://hcodemedia.com/wp-content/uploads/2015/08/fav.png"/>
 
     <!-- Custom CSS -->
     <link href="css/blog-post.css" rel="stylesheet">
-
-    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-    <script>
-      var googletag = googletag || {};
-      googletag.cmd = googletag.cmd || [];
-    </script>
-
-    <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/138871148/basalgar.728x90.test', [728, 90], 'div-gpt-ad-1500082768758-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
 
 </head>
 
@@ -85,7 +71,7 @@
                 <!-- Title -->
                 <img class="img-responsive" src="mobile-logo.png" alt="">
 
-                <h1>Basalgar Test: 728x90 Desktop</h1>
+                <h1>Basaglar Video Test Page</h1>
 
                 <hr>
 
@@ -101,13 +87,66 @@
 
 
                 <!-- Post Content -->
-                <!-- /138871148/basalgar.728x90.test -->
-                <div id='div-gpt-ad-1500082768758-0' style='height:90px; width:728px;'>
-                <script>
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1500082768758-0'); });
+                <script type="text/javascript">
+                    (function()
+                    {
+                      var lkqdSettings = {
+                        pid: 282,
+                        sid: 467259,
+                        playerContainerId: 'ad' + Math.round(Math.random()*1000000000).toString(),
+                        playerId: '',
+                        playerWidth: 640,
+                        playerHeight: 360,
+                        execution: 'inbanner',
+                        placement: '',
+                        passbackFirst: false,
+                        playInitiation: 'auto',
+                        volume: 0,
+                        pageUrl: '',
+                        trackImp: '',
+                        trackClick: '',
+                        custom1: '',
+                        custom2: '',
+                        custom3: '',
+                        pubMacros: '',
+                        dfp: false,
+                        lkqdId: new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString(),
+                        supplyContentVideo: {
+                          url: '', clickurl: '', play: 'pre'
+                        }
+                      };
+
+                      var lkqdVPAID;
+                      var creativeData = '';
+                      if (!document.getElementById(lkqdSettings.playerContainerId)) { try { if (document.readyState && document.readyState != 'complete' && document.readyState != 'interactive'){ document.write('<div id=' + lkqdSettings.playerContainerId + '></div>'); }} catch (e) {}}
+                      var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
+
+                      function onVPAIDLoad()
+                      {
+                        lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+                      }
+
+                      var vpaidFrame = document.createElement('iframe');
+                      vpaidFrame.id = lkqdSettings.lkqdId;
+                      vpaidFrame.name = lkqdSettings.lkqdId;
+                      vpaidFrame.style.display = 'none';
+                      var vpaidFrameLoaded = function() {
+                        vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
+                        vpaidLoader.src = 'https://ad.lkqd.net/vpaid/formats.js?pid=282&sid=467259';
+                        vpaidLoader.onload = function() {
+                          lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
+                          onVPAIDLoad();
+                          lkqdVPAID.handshakeVersion('2.0');
+                          lkqdVPAID.initAd(lkqdSettings.playerWidth, lkqdSettings.playerHeight, 'normal', 600, creativeData, environmentVars);
+                        };
+                        vpaidFrame.contentWindow.document.body.appendChild(vpaidLoader);
+                      };
+                      vpaidFrame.onload = vpaidFrameLoaded;
+                      vpaidFrame.onerror = vpaidFrameLoaded;
+                      document.documentElement.appendChild(vpaidFrame);
+                    })();
                 </script>
-                </div>
-            
+               
                 
                 <hr>
 
@@ -250,7 +289,7 @@
                     <!-- /.row -->
                 </div>
                 <div class="well">
-                </div>
+				</div>
 
                 <!-- Side Widget Well -->
                 <div class="well">

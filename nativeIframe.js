@@ -1,3 +1,8 @@
+function autoPlay() {
+    window.document.querySelector('div[style*="https://cdn.adtags.mobi/shared/img/play.png"]').click();
+    console.log("Pressed Play");
+}
+
 function updateDivSize() {
     //alert("in the updateParentDiv script");
     //
@@ -57,6 +62,8 @@ function updateDivSize() {
             // gptDiv.style.setProperty ("width", "100%", "important");
         }
     }
+
+    setTimeout(function() { autoPlay(); }, 10000);
 
     // if (gptDiv2.tagName == 'DIV') {
     //     tag_id = gptDiv2.id;

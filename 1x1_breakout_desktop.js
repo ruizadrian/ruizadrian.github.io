@@ -100,7 +100,7 @@ function updateParentDiv() {
         }
     }
 
-    setTimeout(function() { buttonCreator(); }, 10000);
+    setTimeout(function() { buttonCreator(); }, 35000);
 
 }
 

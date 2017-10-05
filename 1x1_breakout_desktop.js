@@ -29,6 +29,31 @@ function buttonCreator(){
     document.body.appendChild(closeButton);
 }
 
+function eplanning() {
+    // var frame;
+    // var w = document.defaultView || document.parentWindow;
+    // var frames = w.parent.document.getElementsByTagName('iframe');
+    // for (var i = frames.length; i-->0;) {
+    //     frame = frames[i];
+    //     try {
+    //         var d = frame.contentDocument || frame.contentWindow.document;
+    //         if (d===document)
+    //     break;
+    //     } catch(e) {}
+    // }
+    var eplBody = window.parent.document.body;
+    //alert(eplBody.id);
+    var eplFrame = eplBody.id;
+    var epl = window.top.document.querySelector('iframe[id=eplFrame]');
+    epl.style.setProperty ("display", "block", "important");
+    epl.style.setProperty ("position", "fixed", "important");
+    epl.style.setProperty ("bottom", "0px", "important");
+    epl.style.setProperty ("right", "0px", "important");
+    epl.style.setProperty ("height", "300px", "important");
+    epl.style.setProperty ("width", "500px", "important");
+    epl.style.setProperty ("z-index", "2147483647", "important"); //added
+}
+
 function updateParentDiv() {
     //alert("in the updateParentDiv script");
     //
@@ -56,7 +81,7 @@ function updateParentDiv() {
     frame.width = "500px";
     
     frame.style.setProperty ("display", "block", "important"); 
-    frame.style.setProperty ("z-index", "2147483646", "important");
+    frame.style.setProperty ("z-index", "2147483647", "important");
 
     var tag_id;
     var parentDiv = frame.parentNode;
@@ -67,6 +92,7 @@ function updateParentDiv() {
             parentDiv.style.setProperty ("position", "fixed", "important");
             parentDiv.style.setProperty ("bottom", "0px", "important");
             parentDiv.style.setProperty ("right", "0px", "important");
+            parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
             parentDiv.height = "300px";
             parentDiv.width = "500px";
         }
@@ -83,6 +109,7 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("position", "fixed", "important");
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
+            gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
             gptDiv.height = "300px";
             gptDiv.width = "500px";
         }
@@ -95,10 +122,13 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("position", "fixed", "important");
             gptDiv2.style.setProperty ("bottom", "0px", "important");
             gptDiv2.style.setProperty ("right", "0px", "important");
+            gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
             gptDiv2.height = "300px";
             gptDiv2.width = "500px";
         }
     }
+
+    eplanning();
 
     setTimeout(function() { buttonCreator(); }, 35000);
 

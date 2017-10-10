@@ -44,7 +44,7 @@ function eplanning() {
     var eplBody = window.parent.document.body;
     //alert(eplBody.id);
     var eplFrame = eplBody.id;
-    var epl = window.top.document.querySelector('iframe[id=eplFrame]');
+    var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
     epl.style.setProperty ("display", "block", "important");
     epl.style.setProperty ("position", "fixed", "important");
     epl.style.setProperty ("bottom", "0px", "important");

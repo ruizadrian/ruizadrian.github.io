@@ -31,6 +31,31 @@ function buttonCreator(){
 
 }
 
+function eplanning() {
+    // var frame;
+    // var w = document.defaultView || document.parentWindow;
+    // var frames = w.parent.document.getElementsByTagName('iframe');
+    // for (var i = frames.length; i-->0;) {
+    //     frame = frames[i];
+    //     try {
+    //         var d = frame.contentDocument || frame.contentWindow.document;
+    //         if (d===document)
+    //     break;
+    //     } catch(e) {}
+    // }
+    var eplBody = window.parent.document.body;
+    //alert(eplBody.id);
+    var eplFrame = eplBody.id;
+    var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
+    epl.style.setProperty ("display", "block", "important");
+    epl.style.setProperty ("position", "fixed", "important");
+    epl.style.setProperty ("bottom", "0px", "important");
+    epl.style.setProperty ("right", "0px", "important");
+    epl.style.setProperty ("height", "170px", "important");
+    epl.style.setProperty ("width", "300px", "important");
+    epl.style.setProperty ("z-index", "2147483647", "important"); //added
+}
+
 function updateParentDiv() {
     //alert("in the updateParentDiv script");
     //
@@ -97,6 +122,7 @@ function updateParentDiv() {
         }
     }
 
+    eplanning();
     setTimeout(function() { buttonCreator(); }, 10000);
 
 }

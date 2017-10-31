@@ -13,6 +13,22 @@ function close_func() {
     frame.remove();
 }
 
+// function createPlayer(){
+//     var playerInstance = jwplayer('player');
+//         playerInstance.setup({
+//             playlist: "https://cdn.jwplayer.com/v2/playlists/8FkXr22R",
+//             advertising: {
+//                 client: 'googima',
+//                 tag: 'PUTADTAG'
+//             }
+//         }); 
+
+//     playerInstance.on('adError', function (e){
+//         playerInstance.remove();
+//     });
+
+// }
+
 function buttonCreator(){
     var closeButton = document.createElement("span");
     closeButton.id = "closeButton";
@@ -23,8 +39,8 @@ function buttonCreator(){
     closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
     closeButton.style.backgroundSize = 'contain';
     closeButton.style.backgroundRepeat = 'no-repeat';
-    closeButton.style.width = "10px";
-    closeButton.style.height = "10px";
+    closeButton.style.width = "15px";
+    closeButton.style.height = "15px";
     closeButton.onclick = function() {close_func();} ;
     document.body.appendChild(closeButton);
 }
@@ -49,8 +65,8 @@ function eplanning() {
     epl.style.setProperty ("position", "fixed", "important");
     epl.style.setProperty ("bottom", "0px", "important");
     epl.style.setProperty ("right", "0px", "important");
-    epl.style.setProperty ("height", "170px", "important");
-    epl.style.setProperty ("width", "300px", "important");
+    epl.style.setProperty ("height", "300px", "important");
+    epl.style.setProperty ("width", "500px", "important");
     epl.style.setProperty ("z-index", "2147483647", "important"); //added
 }
 
@@ -72,29 +88,29 @@ function updateParentDiv() {
 		break;
         } catch(e) {}
     }
-    //alert(frame.id);
+
     frame.style.setProperty ("position", "fixed", "important");
     frame.style.setProperty ("bottom", "0px", "important");
     frame.style.setProperty ("right", "0px", "important");
 
-    frame.height = "170px";
-    frame.width = "300px";
+    frame.height = "300px";
+    frame.width = "500px";
     
     frame.style.setProperty ("display", "block", "important"); 
-    frame.style.setProperty ("z-index", "2147483646", "important");
+    frame.style.setProperty ("z-index", "2147483647", "important");
 
     var tag_id;
     var parentDiv = frame.parentNode;
     if (parentDiv.tagName == 'DIV') {
         tag_id = parentDiv.id;
         if( tag_id.indexOf("google_ads_iframe_") >= 0){
-           parentDiv.style.setProperty ("display", "block", "important");
-           parentDiv.style.setProperty ("position", "fixed", "important");
+            parentDiv.style.setProperty ("display", "block", "important");
+            parentDiv.style.setProperty ("position", "fixed", "important");
             parentDiv.style.setProperty ("bottom", "0px", "important");
             parentDiv.style.setProperty ("right", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            parentDiv.height = "170px";
-            parentDiv.width = "300px";
+            parentDiv.height = "300px";
+            parentDiv.width = "500px";
         }
     }
 
@@ -110,8 +126,8 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv.height = "170px";
-            gptDiv.width = "300px";
+            gptDiv.height = "300px";
+            gptDiv.width = "500px";
         }
     }
 
@@ -123,17 +139,19 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("bottom", "0px", "important");
             gptDiv2.style.setProperty ("right", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv2.height = "170px";
-            gptDiv2.width = "300px";
+            gptDiv2.height = "300px";
+            gptDiv2.width = "500px";
         }
     }
 
-    //eplanning();
-    setTimeout(function() { buttonCreator(); }, 10000);
+    eplanning();
+    setTimeout(function() { buttonCreator(); }, 20000);
+    
 
 }
 
 window.onloadFuncs = [];
+
 window.onload = function(){
     for (var i in this.onloadFuncs){
         this.onloadFuncs[i]();

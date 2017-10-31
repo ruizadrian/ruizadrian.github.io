@@ -128,14 +128,12 @@ function updateParentDiv() {
         }
     }
 
-    eplanning();
-
-    setTimeout(function() { buttonCreator(); }, 35000);
+    setTimeout(function() { buttonCreator(); }, 20000);
+    //eplanning();
 
 }
 
 window.onloadFuncs = [];
-
 window.onload = function(){
     for (var i in this.onloadFuncs){
         this.onloadFuncs[i]();

@@ -1,5 +1,6 @@
 function close_func() {
     var frame;
+    var HCM_Div = document.getElementById('JWHCM');
     var w= document.defaultView || document.parentWindow;
     var frames= w.parent.document.getElementsByTagName('iframe');
     for (var i= frames.length; i-->0;) {
@@ -10,14 +11,18 @@ function close_func() {
         break;
         } catch(e) {}
     }
-    frame.remove();
+
+
+    //frame.remove();
+    HCM_Div.remove();
 }
 
 function buttonCreator(){
     var closeButton = document.createElement("span");
+    var HCM_Div = document.getElementById('JWHCM');
     closeButton.id = "closeButton";
     closeButton.style.position = 'fixed';
-    closeButton.style.top = "5px";
+    //closeButton.style.top = "5px";
     closeButton.style.right = "5px";
     closeButton.style.zIndex = "2147483647";
     closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
@@ -26,7 +31,8 @@ function buttonCreator(){
     closeButton.style.width = "15px";
     closeButton.style.height = "15px";
     closeButton.onclick = function() {close_func();} ;
-    document.body.appendChild(closeButton);
+    //document.body.appendChild(closeButton);
+    HCM_Div.appendChild(closeButton);
 }
 
 function eplanning() {
@@ -74,13 +80,11 @@ function updateParentDiv() {
     }
 
     frame.style.setProperty ("position", "fixed", "important");
-    frame.style.setProperty ("bottom", "20px", "important");
-    frame.style.setProperty ("right", "20px", "important");
+    frame.style.setProperty ("bottom", "0px", "important");
+    frame.style.setProperty ("right", "0px", "important");
 
-    // frame.height = "300px";
-    // frame.width = "500px";
-    frame.style.setProperty ("width", "500px", "important");
-    frame.style.setProperty ("height", "300px", "important");
+    frame.height = "300px";
+    frame.width = "500px";
     
     frame.style.setProperty ("display", "block", "important"); 
     frame.style.setProperty ("z-index", "2147483647", "important");
@@ -95,8 +99,8 @@ function updateParentDiv() {
             parentDiv.style.setProperty ("bottom", "0px", "important");
             parentDiv.style.setProperty ("right", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            parentDiv.style.setProperty ("width", "500px", "important");
-            parentDiv.style.setProperty ("height", "300px", "important");
+            parentDiv.height = "300px";
+            parentDiv.width = "500px";
         }
     }
 
@@ -112,10 +116,8 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            // gptDiv.height = "300px";
-            // gptDiv.width = "500px";
-            gptDiv.style.setProperty ("width", "500px", "important");
-            gptDiv.style.setProperty ("height", "300px", "important");
+            gptDiv.height = "300px";
+            gptDiv.width = "500px";
         }
     }
 
@@ -127,10 +129,8 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("bottom", "0px", "important");
             gptDiv2.style.setProperty ("right", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
-            // gptDiv2.height = "300px";
-            // gptDiv2.width = "500px";
-            gptDiv2.style.setProperty ("width", "500px", "important");
-            gptDiv2.style.setProperty ("height", "300px", "important");
+            gptDiv2.height = "300px";
+            gptDiv2.width = "500px";
         }
     }
 

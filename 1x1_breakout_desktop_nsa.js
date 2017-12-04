@@ -134,7 +134,7 @@ function updateParentDiv() {
         }
     }
 
-    setTimeout(function() { buttonCreator(); }, 20000);
+    setTimeout(function() { buttonCreator(); }, 2000);
     //eplanning();
 
 }

@@ -1,46 +1,36 @@
-function close_func() {
-    var frame;
-    var w= document.defaultView || document.parentWindow;
-    var frames= w.parent.document.getElementsByTagName('iframe');
-    for (var i= frames.length; i-->0;) {
-        frame= frames[i];
-        try {
-            var d= frame.contentDocument || frame.contentWindow.document;
-            if (d===document)
-        break;
-        } catch(e) {}
-    }
-    frame.remove();
-}
+// function close_func() {
+//     var frame;
+//     var w= document.defaultView || document.parentWindow;
+//     var frames= w.parent.document.getElementsByTagName('iframe');
+//     for (var i= frames.length; i-->0;) {
+//         frame= frames[i];
+//         try {
+//             var d= frame.contentDocument || frame.contentWindow.document;
+//             if (d===document)
+//         break;
+//         } catch(e) {}
+//     }
+//     frame.remove();
+// }
 
-function buttonCreator(){
-    var closeButton = document.createElement("span");
-    closeButton.id = "closeButton";
-    closeButton.style.position = 'fixed';
-    closeButton.style.top = "5px";
-    closeButton.style.right = "5px";
-    closeButton.style.zIndex = "2147483647";
-    closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
-    closeButton.style.backgroundSize = 'contain';
-    closeButton.style.backgroundRepeat = 'no-repeat';
-    closeButton.style.width = "15px";
-    closeButton.style.height = "15px";
-    closeButton.onclick = function() {close_func();} ;
-    document.body.appendChild(closeButton);
-}
+// function buttonCreator(){
+//     var closeButton = document.createElement("span");
+//     closeButton.id = "closeButton";
+//     closeButton.style.position = 'fixed';
+//     closeButton.style.top = "5px";
+//     closeButton.style.right = "5px";
+//     closeButton.style.zIndex = "2147483647";
+//     closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
+//     closeButton.style.backgroundSize = 'contain';
+//     closeButton.style.backgroundRepeat = 'no-repeat';
+//     closeButton.style.width = "15px";
+//     closeButton.style.height = "15px";
+//     closeButton.onclick = function() {close_func();} ;
+//     document.body.appendChild(closeButton);
+// }
 
 function eplanning() {
-    // var frame;
-    // var w = document.defaultView || document.parentWindow;
-    // var frames = w.parent.document.getElementsByTagName('iframe');
-    // for (var i = frames.length; i-->0;) {
-    //     frame = frames[i];
-    //     try {
-    //         var d = frame.contentDocument || frame.contentWindow.document;
-    //         if (d===document)
-    //     break;
-    //     } catch(e) {}
-    // }
+
     var eplBody = window.parent.document.body;
     //alert(eplBody.id);
     var eplFrame = eplBody.id;
@@ -54,7 +44,7 @@ function eplanning() {
     epl.style.setProperty ("z-index", "2147483647", "important"); //added
 }
 
-function updateParentDiv() {
+function updateNativeDiv() {
     //alert("in the updateParentDiv script");
     //
     // Determine iFrame and style
@@ -129,7 +119,7 @@ function updateParentDiv() {
     }
 
     //setTimeout(function() { buttonCreator(); }, 20000);
-    eplanning();
+    //eplanning();
 
 }
 
@@ -140,4 +130,4 @@ window.onload = function(){
     }
 }
 
-window.onloadFuncs.push(updateParentDiv);
+window.onloadFuncs.push(updateNativeDiv);

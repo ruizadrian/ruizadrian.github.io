@@ -83,14 +83,19 @@ function updateNativeDiv() {
             //parentDiv.style.setProperty ("bottom", "0px", "important");
             //parentDiv.style.setProperty ("right", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            parentDiv.height = "400px";
-            parentDiv.width = "600px";
+            parentDiv.style.setProperty ("height", "400px", "important");
+            parentDiv.style.setProperty ("width", "600px", "important");
+            // parentDiv.height = "400px";
+            // parentDiv.width = "600px";
         }
     }
 
-    var HCM_Div = document.getElementById('JWHCM');
+    var HCM_Div = document.getElementById('JWHCM_IC');
     var gptDiv = HCM_Div.parentNode;
     var gptDiv2 = HCM_Div.parentNode;
+
+    var HCM_IC = parentDiv;
+    var gptDiv3 = HCM_IC.parentNode;
 
     if (gptDiv.tagName == 'DIV') {
         tag_id = gptDiv.id;
@@ -100,8 +105,10 @@ function updateNativeDiv() {
             //gptDiv.style.setProperty ("bottom", "0px", "important");
             //gptDiv.style.setProperty ("right", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv.height = "400px";
-            gptDiv.width = "600px";
+            gptDiv.style.setProperty ("height", "400px", "important");
+            gptDiv.style.setProperty ("width", "600px", "important");
+            // gptDiv.height = "400px";
+            // gptDiv.width = "600px";
         }
     }
 
@@ -113,8 +120,20 @@ function updateNativeDiv() {
            // gptDiv2.style.setProperty ("bottom", "0px", "important");
             //gptDiv2.style.setProperty ("right", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv2.height = "400px";
-            gptDiv2.width = "600px";
+            gptDiv2.style.setProperty ("height", "400px", "important");
+            gptDiv2.style.setProperty ("width", "600px", "important");
+            // gptDiv2.height = "400px";
+            // gptDiv2.width = "600px";
+        }
+    }
+
+     if (gptDiv3.tagName == 'DIV') {
+        tag_id = gptDiv3.id;
+        if( tag_id.indexOf("div-gpt-ad-") >= 0){
+            gptDiv3.style.setProperty ("display", "block", "important");
+            gptDiv3.style.setProperty ("z-index", "2147483647", "important"); //added
+            gptDiv3.style.setProperty ("height", "400px", "important");
+            gptDiv3.style.setProperty ("width", "600px", "important");
         }
     }
 

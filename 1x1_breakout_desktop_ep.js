@@ -65,8 +65,8 @@ function eplanning() {
     epl.style.setProperty ("position", "fixed", "important");
     epl.style.setProperty ("bottom", "0px", "important");
     epl.style.setProperty ("right", "0px", "important");
-    epl.style.setProperty ("height", "300px", "important");
-    epl.style.setProperty ("width", "500px", "important");
+    epl.style.setProperty ("height", "288px", "important");
+    epl.style.setProperty ("width", "512px", "important");
     epl.style.setProperty ("z-index", "2147483647", "important"); //added
 }
 
@@ -93,8 +93,8 @@ function updateParentDiv() {
     frame.style.setProperty ("bottom", "0px", "important");
     frame.style.setProperty ("right", "0px", "important");
 
-    frame.height = "300px";
-    frame.width = "500px";
+    frame.height = "288px";
+    frame.width = "512px";
     
     frame.style.setProperty ("display", "block", "important"); 
     frame.style.setProperty ("z-index", "2147483647", "important");
@@ -109,8 +109,8 @@ function updateParentDiv() {
             parentDiv.style.setProperty ("bottom", "0px", "important");
             parentDiv.style.setProperty ("right", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            parentDiv.height = "300px";
-            parentDiv.width = "500px";
+            parentDiv.height = "288px";
+            parentDiv.width = "512px";
         }
     }
 
@@ -126,8 +126,8 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv.height = "300px";
-            gptDiv.width = "500px";
+            gptDiv.height = "288px";
+            gptDiv.width = "512px";
         }
     }
 
@@ -139,8 +139,8 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("bottom", "0px", "important");
             gptDiv2.style.setProperty ("right", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv2.height = "300px";
-            gptDiv2.width = "500px";
+            gptDiv2.height = "288px";
+            gptDiv2.width = "512px";
         }
     }
 

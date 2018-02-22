@@ -47,7 +47,9 @@ function updateNativeDiv() {
 
     var HCM_Div = document.getElementById('JWHCM_IC');
     var gptDiv = HCM_Div.parentNode;
-    var gptDiv2 = HCM_Div.parentNode;
+    var gptDiv2 = gptDiv.parentNode;
+    // var gptDiv2 = HCM_Div.parentNode;
+
 
     var HCM_IC = parentDiv;
     var gptDiv3 = HCM_IC.parentNode;
@@ -62,9 +64,19 @@ function updateNativeDiv() {
         }
     }
 
+    // if (gptDiv2.tagName == 'DIV') {
+    //     tag_id = gptDiv2.id;
+    //     if( tag_id.indexOf("google_ads_iframe_") >= 0){
+    //         gptDiv2.style.setProperty ("display", "block", "important");
+    //         gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
+    //         gptDiv2.style.setProperty ("height", "360px", "important");
+    //         gptDiv2.style.setProperty ("width", "640px", "important");
+    //     }
+    // }
+
     if (gptDiv2.tagName == 'DIV') {
         tag_id = gptDiv2.id;
-        if( tag_id.indexOf("google_ads_iframe_") >= 0){
+        if( tag_id.indexOf("div-gpt-ad") >= 0){
             gptDiv2.style.setProperty ("display", "block", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
             gptDiv2.style.setProperty ("height", "360px", "important");

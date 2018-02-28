@@ -1,6 +1,12 @@
 -------------------------------------------------------
 JW Player - Rollout Templates (DFP & E-Planing)
 -------------------------------------------------------
+----------------------
+CSS
+----------------------
+
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/script-tags/JWHCM.css">
+
 
 ----------------------
 Playlists:

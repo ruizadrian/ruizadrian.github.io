@@ -1,7 +1,6 @@
 function createPlayer() {
   var playerInstance = jwplayer('JWHCM_IC');
     playerInstance.setup({
-      //file:"//content.jwplatform.com/players/37CatBvi-VFOh6ElZ.js",
       playlist: 'https://cdn.jwplayer.com/v2/playlists/8FkXr22R',
       autostart: true,
       autoplayadsmuted: true

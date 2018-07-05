@@ -32,7 +32,9 @@ function buttonCreator(){
 function eplanning() {
 
     var eplBody = window.parent.document.body;
-    var eplFrame = eplBody.id;
+    //var eplFrame = eplBody.id;
+
+    var eplFrame = window.parent.frameElement.id;
     var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
     epl.style.setProperty ("display", "block", "important");
     epl.style.setProperty ("position", "fixed", "important");
@@ -59,10 +61,11 @@ function updateParentDiv() {
     }
 
     frame.style.setProperty ("position", "fixed", "important");
-    frame.style.setProperty ("bottom", "20px", "important");
-    frame.style.setProperty ("right", "20px", "important");
-    frame.style.setProperty ("width", "512px", "important");
-    frame.style.setProperty ("height", "288px", "important");
+    frame.style.setProperty ("bottom", "0px", "important");
+    frame.style.setProperty ("right", "0px", "important");
+
+    frame.height = "288px";
+    frame.width = "512px";
     
     frame.style.setProperty ("display", "block", "important"); 
     frame.style.setProperty ("z-index", "2147483647", "important");
@@ -77,8 +80,8 @@ function updateParentDiv() {
             parentDiv.style.setProperty ("bottom", "0px", "important");
             parentDiv.style.setProperty ("right", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            parentDiv.style.setProperty ("width", "512px", "important");
-            parentDiv.style.setProperty ("height", "288px", "important");
+            parentDiv.height = "288px";
+            parentDiv.width = "512px";
         }
     }
 
@@ -94,8 +97,8 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("bottom", "0px", "important");
             gptDiv.style.setProperty ("right", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv.style.setProperty ("width", "512px", "important");
-            gptDiv.style.setProperty ("height", "288px", "important");
+            gptDiv.height = "288px";
+            gptDiv.width = "512px";
         }
     }
 
@@ -107,17 +110,19 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("bottom", "0px", "important");
             gptDiv2.style.setProperty ("right", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
-            gptDiv2.style.setProperty ("width", "512px", "important");
-            gptDiv2.style.setProperty ("height", "288px", "important");
+            gptDiv2.height = "288px";
+            gptDiv2.width = "512px";
         }
     }
 
-    setTimeout(function() { buttonCreator(); }, 2000);
-    //eplanning();
+    eplanning();
+    setTimeout(function() { buttonCreator(); }, 60000);
+    
 
 }
 
 window.onloadFuncs = [];
+
 window.onload = function(){
     for (var i in this.onloadFuncs){
         this.onloadFuncs[i]();

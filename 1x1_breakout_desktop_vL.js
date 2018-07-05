@@ -18,7 +18,7 @@ function buttonCreator(){
     closeButton.id = "closeButton";
     closeButton.style.position = 'fixed';
     closeButton.style.top = "5px";
-    closeButton.style.right = "5px";
+    closeButton.style.left = "5px";
     closeButton.style.zIndex = "2147483647";
     closeButton.style.backgroundImage = "url('https://s3.amazonaws.com/script-tags/closeX.png')";
     closeButton.style.backgroundSize = 'contain';
@@ -29,19 +29,6 @@ function buttonCreator(){
     document.body.appendChild(closeButton);
 }
 
-function eplanning() {
-
-    var eplBody = window.parent.document.body;
-    var eplFrame = eplBody.id;
-    var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
-    epl.style.setProperty ("display", "block", "important");
-    epl.style.setProperty ("position", "fixed", "important");
-    epl.style.setProperty ("bottom", "0px", "important");
-    epl.style.setProperty ("right", "0px", "important");
-    epl.style.setProperty ("height", "288px", "important");
-    epl.style.setProperty ("width", "512px", "important");
-    epl.style.setProperty ("z-index", "2147483647", "important"); //added
-}
 
 function updateParentDiv() {
 
@@ -60,7 +47,7 @@ function updateParentDiv() {
 
     frame.style.setProperty ("position", "fixed", "important");
     frame.style.setProperty ("bottom", "20px", "important");
-    frame.style.setProperty ("right", "20px", "important");
+    frame.style.setProperty ("left", "20px", "important");
     frame.style.setProperty ("width", "512px", "important");
     frame.style.setProperty ("height", "288px", "important");
     
@@ -75,7 +62,7 @@ function updateParentDiv() {
             parentDiv.style.setProperty ("display", "block", "important");
             parentDiv.style.setProperty ("position", "fixed", "important");
             parentDiv.style.setProperty ("bottom", "0px", "important");
-            parentDiv.style.setProperty ("right", "0px", "important");
+            parentDiv.style.setProperty ("left", "0px", "important");
             parentDiv.style.setProperty ("z-index", "2147483647", "important"); //added
             parentDiv.style.setProperty ("width", "512px", "important");
             parentDiv.style.setProperty ("height", "288px", "important");
@@ -92,7 +79,7 @@ function updateParentDiv() {
             gptDiv.style.setProperty ("display", "block", "important");
             gptDiv.style.setProperty ("position", "fixed", "important");
             gptDiv.style.setProperty ("bottom", "0px", "important");
-            gptDiv.style.setProperty ("right", "0px", "important");
+            gptDiv.style.setProperty ("left", "0px", "important");
             gptDiv.style.setProperty ("z-index", "2147483647", "important"); //added
             gptDiv.style.setProperty ("width", "512px", "important");
             gptDiv.style.setProperty ("height", "288px", "important");
@@ -105,16 +92,14 @@ function updateParentDiv() {
             gptDiv2.style.setProperty ("display", "block", "important");
             gptDiv2.style.setProperty ("position", "fixed", "important");
             gptDiv2.style.setProperty ("bottom", "0px", "important");
-            gptDiv2.style.setProperty ("right", "0px", "important");
+            gptDiv2.style.setProperty ("left", "0px", "important");
             gptDiv2.style.setProperty ("z-index", "2147483647", "important"); //added
             gptDiv2.style.setProperty ("width", "512px", "important");
             gptDiv2.style.setProperty ("height", "288px", "important");
         }
     }
 
-    setTimeout(function() { buttonCreator(); }, 2000);
-    //eplanning();
-
+    setTimeout(function() { buttonCreator(); }, 20000);
 }
 
 window.onloadFuncs = [];

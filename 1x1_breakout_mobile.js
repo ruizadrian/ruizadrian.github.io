@@ -30,19 +30,8 @@ function buttonCreator(){
 }
 
 function eplanning() {
-    // var frame;
-    // var w = document.defaultView || document.parentWindow;
-    // var frames = w.parent.document.getElementsByTagName('iframe');
-    // for (var i = frames.length; i-->0;) {
-    //     frame = frames[i];
-    //     try {
-    //         var d = frame.contentDocument || frame.contentWindow.document;
-    //         if (d===document)
-    //     break;
-    //     } catch(e) {}
-    // }
+
     var eplBody = window.parent.document.body;
-    //alert(eplBody.id);
     var eplFrame = eplBody.id;
     var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
     epl.style.setProperty ("display", "block", "important");
@@ -55,10 +44,6 @@ function eplanning() {
 }
 
 function updateParentDiv() {
-    //alert("in the updateParentDiv script");
-    //
-    // Determine iFrame and style
-    //
 
     var frame;
 
@@ -72,7 +57,6 @@ function updateParentDiv() {
 		break;
         } catch(e) {}
     }
-    //alert(frame.id);
     frame.style.setProperty ("position", "fixed", "important");
     frame.style.setProperty ("bottom", "0px", "important");
     frame.style.setProperty ("right", "0px", "important");

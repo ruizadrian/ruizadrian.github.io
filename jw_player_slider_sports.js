@@ -1,9 +1,7 @@
 function createPlayer() {
   var playerInstance = jwplayer('JWHCM');
     playerInstance.setup({
-      //file:"//content.jwplatform.com/players/37CatBvi-VFOh6ElZ.js",
-      playlist: 'https://cdn.jwplayer.com/v2/playlists/8FkXr22R',
-      //autostart: true,
+      playlist: 'https://cdn.jwplayer.com/v2/playlists/ZiZ7E3Ok',
       autoplayadsmuted: true,
       autostart: true
     }); 
@@ -12,7 +10,6 @@ function createPlayer() {
       playerInstance.remove();
     });
 }
-
 
 window.onloadFuncs.push(function() {
   createPlayer();

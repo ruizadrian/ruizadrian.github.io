@@ -29,19 +29,6 @@ function buttonCreator(){
     document.body.appendChild(closeButton);
 }
 
-function eplanning() {
-
-    var eplBody = window.parent.document.body;
-    var eplFrame = eplBody.id;
-    var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
-    epl.style.setProperty ("display", "block", "important");
-    epl.style.setProperty ("position", "fixed", "important");
-    epl.style.setProperty ("bottom", "0px", "important");
-    epl.style.setProperty ("right", "0px", "important");
-    epl.style.setProperty ("height", "288px", "important");
-    epl.style.setProperty ("width", "512px", "important");
-    epl.style.setProperty ("z-index", "2147483647", "important"); //added
-}
 
 function updateParentDiv() {
 
@@ -112,9 +99,7 @@ function updateParentDiv() {
         }
     }
 
-    setTimeout(function() { buttonCreator(); }, 2000);
-    //eplanning();
-
+    setTimeout(function() { buttonCreator(); }, 60000);
 }
 
 window.onloadFuncs = [];

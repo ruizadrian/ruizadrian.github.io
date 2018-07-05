@@ -13,21 +13,6 @@ function close_func() {
     frame.remove();
 }
 
-// function createPlayer(){
-//     var playerInstance = jwplayer('player');
-//         playerInstance.setup({
-//             playlist: "https://cdn.jwplayer.com/v2/playlists/8FkXr22R",
-//             advertising: {
-//                 client: 'googima',
-//                 tag: 'PUTADTAG'
-//             }
-//         }); 
-
-//     playerInstance.on('adError', function (e){
-//         playerInstance.remove();
-//     });
-
-// }
 
 function buttonCreator(){
     var closeButton = document.createElement("span");
@@ -46,19 +31,8 @@ function buttonCreator(){
 }
 
 function eplanning() {
-    // var frame;
-    // var w = document.defaultView || document.parentWindow;
-    // var frames = w.parent.document.getElementsByTagName('iframe');
-    // for (var i = frames.length; i-->0;) {
-    //     frame = frames[i];
-    //     try {
-    //         var d = frame.contentDocument || frame.contentWindow.document;
-    //         if (d===document)
-    //     break;
-    //     } catch(e) {}
-    // }
+
     var eplBody = window.parent.document.body;
-    //alert(eplBody.id);
     var eplFrame = eplBody.id;
     var epl = window.top.document.querySelector('iframe[id^='+eplFrame+']');
     epl.style.setProperty ("display", "block", "important");
@@ -71,10 +45,6 @@ function eplanning() {
 }
 
 function updateParentDiv() {
-    //alert("in the updateParentDiv script");
-    //
-    // Determine iFrame and style
-    //
 
     var frame;
 

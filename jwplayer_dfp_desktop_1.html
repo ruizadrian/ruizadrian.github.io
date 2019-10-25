@@ -84,32 +84,33 @@
                 <img class="img-responsive" src="http://placehold.it/900x300" alt="">
 
                 <hr>
-                <div id="JWHCM_IC"></div>
-                <script src="https://s3.amazonaws.com/script-tags/1x1_breakout_desktop_native_jw.js"></script>
-                <script src="https://content.jwplatform.com/libraries/kCzWCH5J.js"></script>
-                <script>
-                function createPlayer() {
-                  var playerInstance = jwplayer('JWHCM_IC');
-                    playerInstance.setup({
-                      playlist: 'https://cdn.jwplayer.com/v2/playlists/cOPOsIoq',
-                      autostart: true,
-                      autoplayadsmuted: true
-                    }); 
-                    
-                    playerInstance.on('playAttemptFailed', function (e){
-                      console.log(e);
-                    });
-                    playerInstance.on('adError', function (e){
-                      //playerInstance.remove();
-                    });
-                }
+                <div>
+                    <div id="JWHCM_IC"></div>
+                    <script src="https://s3.amazonaws.com/script-tags/1x1_breakout_desktop_native_jw.js"></script>
+                    <script src="https://content.jwplatform.com/libraries/kCzWCH5J.js"></script>
+                    <script>
+                    function createPlayer() {
+                      var playerInstance = jwplayer('JWHCM_IC');
+                        playerInstance.setup({
+                          playlist: 'https://cdn.jwplayer.com/v2/playlists/cOPOsIoq',
+                          autostart: true,
+                          autoplayadsmuted: true
+                        }); 
+                        
+                        playerInstance.on('playAttemptFailed', function (e){
+                          console.log(e);
+                        });
+                        playerInstance.on('adError', function (e){
+                          //playerInstance.remove();
+                        });
+                    }
 
-                window.onloadFuncs.push(function() {
-                  createPlayer();
-                });
+                    window.onloadFuncs.push(function() {
+                      createPlayer();
+                    });
 
-                </script>
-                
+                    </script>
+                </div>
                 <hr>
 
                 <!-- Blog Comments -->

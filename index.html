@@ -3,53 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Rummikub 1 Minute Timer">
+    <meta name="description" content="Rummikub Timer">
     <meta name="keywords" content="Rummikub, Timer, Minute">
     <meta name="author" content="Adrian Ruiz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="css/timer.css" rel="stylesheet">
-	<script async='async' src='js/timer.js'></script>
-    <script data-ad-client="ca-pub-1613168990243784" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- Updated paths (CSS + JS folders) -->
+    <link href="css/timer.css" rel="stylesheet">
+    <script async="async" src="js/timer.js"></script>
+
+    <script data-ad-client="ca-pub-1613168990243784" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
 
-<div class="title">RUMMIKUB TIMER</div>
-<div class="instruct">Press ONCE to START or RESET Timer</div>
+    <div class="title">RUMMIKUB TIMER</div>
+    <div class="instruct">Press ONCE to START or RESET Timer</div>
 
-<div id="top-banner-ad">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- rummikubtimer.com - Responsive -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-1613168990243784"
-        data-ad-slot="6402323877"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-
-<div class="round-button">
-    <div class="round-button-circle" id="startReset">
-        <a class="round-button" id="timer">START</a>
+    <div id="top-banner-ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- rummikubtimer.com - Responsive -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1613168990243784"
+            data-ad-slot="6402323877" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
-</div>
 
-<div id="bottom-banner-ad">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- rummikubtimer.com - Responsive -->
-    <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-1613168990243784"
-        data-ad-slot="6402323877"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
+    <div class="round-button">
+        <div class="round-button-circle" id="startReset">
+            <a class="round-button" id="timer">START</a>
+        </div>
+    </div>
+
+    <!-- NEW: Timer duration options -->
+    <div class="timer-options" id="timerOptions">
+        <button class="timer-option" data-seconds="30">30 sec</button>
+        <button class="timer-option active" data-seconds="60">1 min</button>
+        <button class="timer-option" data-seconds="120">2 mins</button>
+    </div>
+
+    <div id="bottom-banner-ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- rummikubtimer.com - Responsive -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1613168990243784"
+            data-ad-slot="6402323877" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
 </body>
+
 </html>

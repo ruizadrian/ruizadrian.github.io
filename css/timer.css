@@ -5,15 +5,16 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .round-button-circle {
   width: 100%;
-  height:0;
+  height: 0;
   padding-bottom: 100%;
   border-radius: 50%;
-  border:10px solid #cfdcec;
-  overflow:hidden;
-        
-  background: #4679BD; 
+  border: 10px solid #cfdcec;
+  overflow: hidden;
+
+  background: #4679BD;
   box-shadow: 0 0 3px gray;
 
   position: absolute;
@@ -21,29 +22,28 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .round-button-circle:hover {
-  background:#30588e;
+  background: #30588e;
 
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .round-button a {
-  display:block;
-  //float:left;
-  width:100%;
-  padding-top:50%;
-  padding-bottom:50%;
-  //line-height:1em;
-  //margin-top:-0.5em;
-        
-  text-align:center;
-  color:#e2eaf3;
-  font-family:Verdana;
-  font-size:50pt;
-  font-weight:bold;
-  text-decoration:none;
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+
+  text-align: center;
+  color: #e2eaf3;
+  font-family: Verdana;
+  font-size: 50pt;
+  font-weight: bold;
+  text-decoration: none;
 
   position: absolute;
   left: 50%;
@@ -52,39 +52,76 @@
 }
 
 #bottom-banner-ad {
-    position: absolute !important;
-    bottom: 20px !important;
-    left: 50% !important;
-    transform: translate(-50%) !important;
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translate(-50%) !important;
 }
 
 #top-banner-ad {
-    //position: absolute !important;
-    top: 20px !important;
-    left: 50% !important;
-    transform: translate(-50%) !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translate(-50%) !important;
 }
 
 .title {
-    top: 200px !important;
-    text-align:center;
-    font-family:Verdana;
-    font-size:20pt;
-    font-weight:bold;
+  top: 200px !important;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 20pt;
+  font-weight: bold;
 }
+
 .instruct {
-    text-align:center;
-    font-family:Verdana;
-    font-size:10pt;
-    font-weight:bold;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+/* NEW: Timer duration buttons */
+.timer-options {
+  position: absolute;
+  left: 50%;
+  bottom: 110px; /* sits above bottom ad */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-option {
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid #cfdcec;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.timer-option.active {
+  background: #4679BD;
+  color: #e2eaf3;
+  border-color: #4679BD;
 }
 
 @media only screen and (max-width: 600px) {
   .round-button {
-    width:80%;
+    width: 80%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    }
+  }
+
+  .timer-options {
+    bottom: 120px;
+    gap: 10px;
+  }
+
+  .timer-option {
+    padding: 10px 12px;
+  }
 }
